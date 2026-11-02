@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>دليل مذاكرة الفصل 3: العزل (Isolation)</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#1c2430;--muted:#5b6675;--brand:#1f5fbf;--brand-soft:#eaf1fc;--green:#1a7f4b;--green-soft:#e8f6ee;--amber-soft:#fff6e0;--amber:#9a6a00;--line:#dfe5ee;--card:#f8fafd}
+*{box-sizing:border-box}
+:root{color-scheme:light}
+body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;font-size:19px;line-height:1.85;direction:rtl;text-align:right}
+.en{direction:rtl;text-align:right;unicode-bidi:isolate;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.7}
+.ar{direction:rtl;text-align:right}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 60px}
+header.hero{padding:32px 0 12px;text-align:right}
+header.hero h1{font-size:2rem;margin:0 0 6px;color:var(--brand);line-height:1.4}
+header.hero p{margin:0;color:var(--muted)}
+nav.pages{position:sticky;top:0;z-index:50;background:#fffffff2;backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:8px 0}
+nav.pages .row{display:flex;gap:6px;overflow-x:auto;padding:2px 16px;max-width:900px;margin:0 auto;direction:rtl;-webkit-overflow-scrolling:touch}
+nav.pages a{flex:0 0 auto;min-width:40px;text-align:center;padding:5px 10px;border-radius:10px;background:var(--brand-soft);color:var(--brand);text-decoration:none;font-weight:700;font-size:.95rem}
+nav.pages a.fin{background:var(--brand);color:#fff}
+nav.pages .lbl{flex:0 0 auto;align-self:center;color:var(--muted);font-size:.9rem;padding-left:6px}
+.box{border-radius:16px;padding:16px 18px;margin:16px 0;border:1px solid var(--line);background:var(--card)}
+.box.note{background:var(--amber-soft);border-color:#f1deaa}
+.box.note h3{color:var(--amber)}
+.box h3{margin:0 0 8px;font-size:1.15rem}
+.box ul{margin:6px 0;padding-right:22px;padding-left:0}
+.btn{display:inline-block;cursor:pointer;border:1px solid var(--brand);background:#fff;color:var(--brand);padding:8px 16px;border-radius:12px;font-family:inherit;font-size:1rem;font-weight:700}
+.btn:hover{background:var(--brand-soft)}
+section.page{margin:40px 0;border:1px solid var(--line);border-radius:20px;overflow:hidden;scroll-margin-top:64px;background:#fff;box-shadow:0 2px 10px #1f5fbf10}
+.ph{background:var(--brand);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between}
+.ph .t{flex:1 1 240px}
+.ph .num{font-size:.9rem;opacity:.85}
+.ph h2{margin:0;font-size:1.25rem;line-height:1.5}
+.ph .links{display:flex;gap:6px;flex-wrap:wrap}
+.ph .links a{background:#ffffff26;color:#fff;text-decoration:none;padding:3px 12px;border-radius:10px;font-size:.9rem}
+.ph .links a:hover{background:#ffffff40}
+.part{padding:16px 18px;border-top:1px solid var(--line)}
+.part>h3{margin:0 0 10px;font-size:1.05rem;color:var(--brand)}
+.orig,.trans{border-radius:14px;padding:12px 16px}
+.orig{background:#f3f5f9}
+.trans{background:var(--brand-soft)}
+.line{margin:4px 0;font-size:1.05rem}
+.explain p{margin:8px 0}
+.explain ul{padding-right:22px;padding-left:0;margin:8px 0}
+.explain li{margin:4px 0}
+.tip{background:var(--green-soft);border-right:5px solid var(--green);padding:10px 14px;border-radius:10px;margin:10px 0}
+.link-tip{background:var(--amber-soft);border-right:5px solid #e0a800;padding:10px 14px;border-radius:10px;margin:10px 0}
+.q{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:14px 0;background:var(--card)}
+.qh{display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+.qn{background:var(--brand);color:#fff;border-radius:8px;padding:0 10px;font-weight:700;font-size:.9rem}
+.qt{background:#fff;border:1px solid var(--line);border-radius:8px;padding:0 10px;font-size:.85rem;color:var(--muted)}
+.qen{font-weight:600;font-size:1.05rem}
+.qar{color:var(--muted);margin-top:2px}
+.opt{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;margin:8px 0}
+.opt .en{font-weight:500}
+.opt .ar{color:var(--muted);font-size:.95rem}
+details.ans{margin-top:10px}
+details.ans summary{cursor:pointer;list-style:none;display:inline-block;background:var(--green);color:#fff;padding:7px 16px;border-radius:10px;font-weight:700;font-size:.95rem}
+details.ans summary::-webkit-details-marker{display:none}
+details.ans[open] summary{background:#5b6675}
+.ansbox{background:var(--green-soft);border:1px solid #bfe3cf;border-radius:12px;padding:12px 14px;margin-top:10px}
+.ansbox .ok{font-weight:800;color:var(--green)}
+.ansbox .why{margin-top:8px}
+.foot{text-align:center;color:var(--muted);margin:30px 0}
+.final .ph{background:#0e7a4f}
+@media(max-width:600px){body{font-size:18px}header.hero h1{font-size:1.6rem}.ph h2{font-size:1.1rem}}
+@media print{nav.pages,.btn{display:none}details.ans:not([open]) .ansbox{display:none}}
+</style>
+</head>
+<body>
+<nav class="pages" id="nav"><div class="row" id="navrow"></div></nav>
+<div class="wrap">
+<header class="hero" id="top">
+  <h1>دليل مذاكرة: الفصل 3 – العزل (Isolation)</h1>
+  <p class="en" style="color:var(--muted)">Cybersecurity Design Principles – CYBS 4301 – Dr. Ahmed Abba Haruna</p>
+</header>
+
+<div class="box note">
+  <h3>📢 إعلان الدكتور (كما وصل)</h3>
+  <div class="en">
+    <p>Dear Students,<br>I hope you are doing well.<br>The exams is covering chapter 1 - chapter 4.<br>It is going to be in the following style:<br>MCQs<br>True/False<br>Essay<br>Best wishes.</p>
+  </div>
+  <div class="ar">
+    <b>الترجمة:</b> عزيزي الطلاب، أتمنى أن تكونوا بخير. الاختبار يغطي الفصل 1 إلى الفصل 4، وسيكون بالأسلوب التالي: أسئلة اختيار من متعدد (MCQs)، صح/خطأ (True/False)، ومقالي (Essay). مع أطيب التمنيات.
+    <p>👈 لذلك صمّمت لك الأسئلة في هذا الملف على الأنماط الثلاثة نفسها: اختيار من متعدد، صح وخطأ، ومقالي/إجابة قصيرة.</p>
+  </div>
+</div>
+
+<div class="box">
+  <h3>⏱ تقدير حجم الملف ووقت المذاكرة</h3>
+  <ul>
+    <li><b>حجم المحتوى:</b> 26 صفحة (شريحة)، لكن المعلومات <b>خفيفة إلى متوسطة</b> وليست دسمة. أغلب الشرائح 3 نقاط قصيرة.</li>
+    <li><b>صعوبته:</b> سهل الفهم (مفاهيم، لا معادلات ولا حسابات)، لكن التحدي في <b>التفريق بين المصطلحات المتشابهة</b> (عزل العمليات / الذاكرة / الصلاحيات، والحاويات مقابل الأجهزة الافتراضية).</li>
+    <li><b>الوقت التقريبي للشخص العادي لمذاكرته لأول مرة بعمق:</b> حوالي <b>ساعة ونصف إلى ساعتين</b> موزعة هكذا:
+      <ul>
+        <li>قراءة الشرح وفهمه: 45 – 60 دقيقة</li>
+        <li>حل أسئلة كل صفحة: 30 – 40 دقيقة</li>
+        <li>المراجعة النهائية الشاملة: 20 – 30 دقيقة</li>
+      </ul>
+    </li>
+    <li><b>نصيحتي:</b> وزّعها على جلستين (الصفحات 1–13 ثم 14–26 + المراجعة)، وحاول الإجابة قبل الضغط على «إظهار الإجابة».</li>
+  </ul>
+</div>
+
+<div class="box">
+  <h3>🧭 طريقة الاستخدام</h3>
+  <ul>
+    <li>اضغط على <b>رقم الصفحة</b> في الشريط العلوي (يبقى ثابتًا أثناء التمرير) لتنتقل مباشرة إلى بداية تلك الصفحة.</li>
+    <li>كل صفحة مرتبة هكذا: ① النص الأصلي ② الترجمة ③ الشرح والتبسيط ④ اختبار الصفحة.</li>
+    <li>الإجابات مخفية، اضغط <b>«إظهار الإجابة»</b> لرؤية الإجابة الصحيحة وسبب صحتها.</li>
+    <li>في نهاية الملف <b>مراجعة نهائية شاملة</b> (اختيار من متعدد + صح/خطأ + مقالي).</li>
+  </ul>
+  <button class="btn" id="closeAll">إغلاق كل الإجابات المفتوحة</button>
+</div>
+
+<main id="content"></main>
+<div class="foot">انتهى الملف ✅ — <a href="#top">العودة للأعلى</a></div>
+</div>
+
+<script>
+//DATA_START
+const mcq=(qe,qa,o,a,x)=>({t:'mcq',q:[qe,qa],o,a,x});
+const tf=(qe,qa,a,x)=>({t:'tf',q:[qe,qa],a,x});
+const sa=(qe,qa,ae,aa,x)=>({t:'sa',q:[qe,qa],ae,aa,x});
+const ess=(qe,qa,ae,aa,x)=>({t:'essay',q:[qe,qa],ae,aa,x});
+
+const PAGES=[
+{n:1,te:'Cover Page',ta:'صفحة الغلاف',plain:true,
+orig:['Cybersecurity Design Principles','CYBS 4301','Dr. Ahmed Abba Haruna','Associate Professor,','University of Hafr Al-Batin (UoHB)','College of Computer Science and Engineering (CCSE)','Hafr Al-Batin 31991, Saudi Arabia.','aaharuna@uhb.edu.sa'],
+trans:['مبادئ تصميم الأمن السيبراني','CYBS 4301','د. أحمد أبا هارونا','أستاذ مشارك،','جامعة حفر الباطن (UoHB)','كلية علوم وهندسة الحاسب (CCSE)','حفر الباطن 31991، المملكة العربية السعودية.','aaharuna@uhb.edu.sa'],
+explain:`<p>هذه <b>صفحة الغلاف</b>، تعرّفك على المقرر ومن يدرّسه. المقرر اسمه <b>Cybersecurity Design Principles</b> أي «مبادئ تصميم الأمن السيبراني».</p>
+<p><b>فكرة المقرر ببساطة:</b> بدل أن نسدّ الثغرات بعد أن يُخترق النظام، نتعلم <b>مبادئ</b> نبني بها الأنظمة آمنة من البداية. كل فصل يشرح مبدأً، والفصل 3 الذي بين يديك يشرح مبدأ <b>العزل (Isolation)</b>.</p>
+<div class="tip">💡 <b>ربط:</b> فكّر في المبادئ مثل «قواعد هندسة بناء آمن»؛ كما يضع المهندس أبواب الطوارئ والجدران العازلة وقت التصميم لا بعد الحريق.</div>
+<div class="link-tip">📌 تذكير: الاختبار يغطي الفصول 1–4 بأسلوب MCQ وصح/خطأ ومقالي.</div>`,
+quiz:[
+mcq('What is the name of the course this lecture belongs to?','ما اسم المقرر الذي تنتمي إليه هذه المحاضرة؟',[['Cybersecurity Design Principles','مبادئ تصميم الأمن السيبراني'],['Network Programming','برمجة الشبكات'],['Operating System Internals','البنية الداخلية لأنظمة التشغيل'],['Applied Cryptography','التشفير التطبيقي']],0,'اسم المقرر مكتوب في الغلاف: Cybersecurity Design Principles ورمزه CYBS 4301.'),
+sa('In one sentence, what does the course title suggest the course is about?','في جملة واحدة، ماذا يوحي عنوان المقرر بأنه يتناول؟','It is about the principles used to design systems securely from the start.','يتناول المبادئ المستخدمة لتصميم الأنظمة بشكل آمن منذ البداية.','العنوان «Design Principles» يعني مبادئ تصميم، و«Cybersecurity» يعني الأمن السيبراني، فالمقرر يركز على بناء الأمن داخل التصميم.'),
+tf('The lecturer of this course is Dr. Ahmed Abba Haruna from the University of Hafr Al-Batin (UoHB).','محاضر هذا المقرر هو د. أحمد أبا هارونا من جامعة حفر الباطن (UoHB).',true,'صحيح، فالغلاف يذكر اسمه ولقبه (أستاذ مشارك) وجامعته (University of Hafr Al-Batin) وكليته (CCSE).')
+]},
+
+{n:2,te:'Chapter 3: Isolation',ta:'الفصل الثالث: العزل',plain:true,
+orig:['Chapter 3: Isolation','Process, Memory, and Privilege Isolation','Isolation in Operating Systems and Cloud Environments','Benefits and Limitations'],
+trans:['الفصل 3: العزل','عزل العمليات والذاكرة والصلاحيات','العزل في أنظمة التشغيل والبيئات السحابية','الفوائد والقيود'],
+explain:`<p>هذه شريحة <b>عنوان الفصل</b> وهي بمثابة <b>خريطة الطريق</b> لكل ما سيأتي. الفصل مقسّم إلى 4 محاور:</p>
+<ul><li><b>① أنواع العزل الثلاثة:</b> العمليات (Process) والذاكرة (Memory) والصلاحيات (Privilege).</li>
+<li><b>② العزل داخل أنظمة التشغيل (OS).</b></li>
+<li><b>③ العزل في السحابة (Cloud).</b></li>
+<li><b>④ فوائد العزل وحدوده (Benefits and Limitations).</b></li></ul>
+<div class="tip">💡 <b>ربط:</b> العزل مثل غرف الفندق: كل نزيل في غرفته، لا يرى أغراض غيره (ذاكرة)، ولا يدخل غرفة الإدارة (صلاحيات)، وانفجار مشكلة في غرفة لا يحرق الفندق كله (عمليات).</div>`,
+quiz:[
+mcq('Which of the following is NOT part of the chapter title topics?','أي مما يلي ليس من موضوعات عنوان الفصل؟',[['Process isolation','عزل العمليات'],['Memory isolation','عزل الذاكرة'],['Privilege isolation','عزل الصلاحيات'],['Network encryption','تشفير الشبكات']],3,'العنوان ذكر Process وMemory وPrivilege فقط. تشفير الشبكات ليس من المذكور.'),
+tf('Chapter 3 discusses isolation in operating systems and cloud environments.','الفصل 3 يناقش العزل في أنظمة التشغيل والبيئات السحابية.',true,'صحيح، مكتوب صراحة في العنوان: Isolation in Operating Systems and Cloud Environments.'),
+sa('Name the three types of isolation covered in this chapter.','اذكر أنواع العزل الثلاثة التي يغطيها هذا الفصل.','Process isolation, memory isolation, and privilege isolation.','عزل العمليات، عزل الذاكرة، وعزل الصلاحيات.','هذه الثلاثة هي عمود الفصل، وسترد في الاختبار بكثرة.'),
+tf('Besides the types of isolation, the chapter also covers the benefits and limitations of isolation.','إلى جانب أنواع العزل، يغطي الفصل أيضًا فوائد العزل وقيوده.',true,'صحيح، السطر الأخير في العنوان: Benefits and Limitations.')
+]},
+
+{n:3,te:'Week Objectives',ta:'أهداف الأسبوع',
+orig:['Week Objectives','Understand the concept of isolation in secure system design.','Differentiate between process, memory, and privilege isolation.','Examine isolation in operating systems and cloud environments.','Discuss benefits and limitations of isolation.'],
+trans:['أهداف الأسبوع','فهم مفهوم العزل في تصميم الأنظمة الآمنة.','التفريق بين عزل العمليات وعزل الذاكرة وعزل الصلاحيات.','دراسة العزل في أنظمة التشغيل والبيئات السحابية.','مناقشة فوائد العزل وقيوده.'],
+explain:`<p>الشريحة تقول لك: «بعد هذا الأسبوع يجب أن تكون قادرًا على 4 أشياء»:</p>
+<ul><li><b>1) الفهم:</b> ما هو العزل ولماذا هو جزء من تصميم الأنظمة الآمنة.</li>
+<li><b>2) التفريق:</b> أن تميّز بين الأنواع الثلاثة (وهذا سؤال اختبار شائع).</li>
+<li><b>3) التطبيق:</b> أين نراه في نظام التشغيل وفي السحابة.</li>
+<li><b>4) التقييم:</b> متى يفيد ومتى يعجز (الفوائد والقيود).</li></ul>
+<div class="link-tip">📌 استخدم هذه الأهداف كقائمة تحقق: بعد انتهائك اسأل نفسك: هل أستطيع شرح كل هدف بكلامي؟</div>`,
+quiz:[
+mcq('Which of the following is a week objective?','أي مما يلي هدف من أهداف الأسبوع؟',[['Differentiate between process, memory, and privilege isolation','التفريق بين عزل العمليات والذاكرة والصلاحيات'],['Write malware detection tools','كتابة أدوات لكشف البرمجيات الخبيثة'],['Design encryption algorithms','تصميم خوارزميات تشفير'],['Configure firewalls','ضبط جدران الحماية']],0,'الهدف الثاني في الشريحة هو التفريق بين الأنواع الثلاثة للعزل.'),
+tf('One objective is to discuss both the benefits and the limitations of isolation.','من الأهداف مناقشة فوائد العزل وقيوده معًا.',true,'صحيح، الهدف الرابع: Discuss benefits and limitations of isolation.'),
+sa('How many objectives are listed, and which one is about OS and cloud?','كم عدد الأهداف المذكورة، وأيها يخص أنظمة التشغيل والسحابة؟','Four objectives; the third: examine isolation in operating systems and cloud environments.','أربعة أهداف؛ والثالث: دراسة العزل في أنظمة التشغيل والبيئات السحابية.','عدد الأهداف 4 والثالث هو المتعلق بالبيئتين.'),
+tf('The first objective is to understand the concept of isolation in secure system design.','الهدف الأول هو فهم مفهوم العزل في تصميم الأنظمة الآمنة.',true,'صحيح، الهدف الأول: Understand the concept of isolation in secure system design.')
+]},
+
+{n:4,te:'What is Isolation?',ta:'ما هو العزل؟',
+orig:['What is Isolation?','A principle that ensures processes and users are kept separate.','Prevents unauthorized access and interference.','Critical for system reliability and security.'],
+trans:['ما هو العزل؟','مبدأ يضمن إبقاء العمليات والمستخدمين منفصلين عن بعضهم.','يمنع الوصول غير المصرّح به والتداخل.','أساسي لموثوقية النظام وأمانه.'],
+explain:`<p><b>التعريف:</b> العزل مبدأ أمني يعني <b>وضع حواجز</b> بين الأشياء الموجودة في النظام (برامج تعمل = عمليات، وأشخاص = مستخدمين) حتى لا تتدخل في شؤون بعضها.</p>
+<p><b>ماذا يمنع؟</b> شيئين:</p>
+<ul><li><b>الوصول غير المصرّح به (Unauthorized access):</b> أن يطّلع أحد على ما ليس له.</li>
+<li><b>التداخل (Interference):</b> أن يعطّل أو يغيّر عمل غيره، ولو بالخطأ دون قصد خبيث.</li></ul>
+<p><b>لماذا مهم؟</b> لأنه يخدم هدفين: <b>الموثوقية (Reliability)</b> أي أن يعمل النظام باستقرار، و<b>الأمان (Security)</b>.</p>
+<div class="tip">💡 <b>ربط:</b> العمارة السكنية: كل شقة بابها وقفلها. الجار لا يدخل شقتك (أمان)، وتسرّب ماء في شقة لا يغرق الجميع (موثوقية).</div>`,
+quiz:[
+mcq('Which statement best defines isolation?','أي عبارة تعرّف العزل بأفضل صورة؟',[['Keeping processes and users separate','إبقاء العمليات والمستخدمين منفصلين'],['Encrypting all stored data','تشفير كل البيانات المخزنة'],['Backing up files regularly','أخذ نسخ احتياطية دورية للملفات'],['Monitoring network traffic','مراقبة حركة الشبكة']],0,'الشريحة تعرّفه بأنه مبدأ يضمن إبقاء العمليات والمستخدمين منفصلين.'),
+tf('Isolation is important only for security, not for reliability.','العزل مهم للأمان فقط وليس للموثوقية.',false,'خطأ، الشريحة تقول إنه Critical for system reliability and security أي للموثوقية والأمان معًا.'),
+mcq('Isolation prevents which two problems?','العزل يمنع أي مشكلتين؟',[['Unauthorized access and interference','الوصول غير المصرّح به والتداخل'],['Slow internet and low storage','بطء الإنترنت وقلة التخزين'],['Software licensing and updates','تراخيص البرامج والتحديثات'],['Hardware aging and overheating','قِدم العتاد والسخونة']],0,'النقطة الثانية: Prevents unauthorized access and interference.'),
+sa('Define isolation in your own words and mention what it protects.','عرّف العزل بكلماتك الخاصة واذكر ما الذي يحميه.','Isolation separates processes and users so they cannot access or interfere with each other, protecting system security and reliability.','العزل يفصل العمليات والمستخدمين بحيث لا يصل أحدهم لغيره أو يتدخل في عمله، فيحمي أمان النظام وموثوقيته.','التعريف الجيد يجب أن يشمل: الفصل + منع الوصول والتداخل + الأمان والموثوقية.')
+]},
+
+{n:5,te:'Importance of Isolation',ta:'أهمية العزل',
+orig:['Importance of Isolation','Prevents data leakage between processes.','Limits damage from compromised components.','Supports multi-user and multi-tenant environments.'],
+trans:['أهمية العزل','يمنع تسرّب البيانات بين العمليات.','يحدّ من الضرر الناتج عن المكوّنات المخترَقة.','يدعم البيئات متعددة المستخدمين ومتعددة المستأجرين.'],
+explain:`<p>ثلاث فوائد رئيسية تُحفظ بالترتيب:</p>
+<ul><li><b>① منع تسرب البيانات:</b> عملية (برنامج) لا تقرأ بيانات عملية أخرى؛ مثل أن برنامج المفكرة لا يطّلع على كلمات سر المتصفح.</li>
+<li><b>② احتواء الضرر:</b> إذا اخترق مهاجم جزءًا واحدًا، يبقى محصورًا فيه ولا ينتشر. (نسميه <b>Containment</b>).</li>
+<li><b>③ دعم تعدد المستخدمين والمستأجرين:</b> <b>Multi-user</b> أي أكثر من مستخدم على نفس الجهاز، و<b>Multi-tenant</b> أي أكثر من عميل/شركة (مستأجر) على نفس البنية السحابية.</li></ul>
+<div class="tip">💡 <b>ربط:</b> السفينة ذات الحجرات المحكمة: لو خرقت حجرة يدخلها الماء ولا تغرق السفينة كلها. وكذلك المستأجرون في مبنى واحد: كل شركة في مكتب مغلق.</div>`,
+quiz:[
+mcq('Which is a benefit of isolation listed on this page?','أي مما يلي فائدة للعزل مذكورة في هذه الصفحة؟',[['Prevents data leakage between processes','يمنع تسرب البيانات بين العمليات'],['Increases CPU speed','يرفع سرعة المعالج'],['Removes the need for passwords','يلغي الحاجة لكلمات المرور'],['Doubles memory size','يضاعف حجم الذاكرة']],0,'أول فائدة: Prevents data leakage between processes.'),
+tf('Isolation helps limit the damage when a component is compromised.','العزل يساعد على الحدّ من الضرر عند اختراق أحد المكوّنات.',true,'صحيح: Limits damage from compromised components.'),
+tf('Isolation is unnecessary in multi-tenant environments.','العزل غير ضروري في البيئات متعددة المستأجرين.',false,'خطأ، فهو يدعمها بشكل أساسي: Supports multi-user and multi-tenant environments.'),
+sa('Give the three reasons why isolation is important according to the page.','اذكر ثلاثة أسباب لأهمية العزل بحسب الصفحة.','1) Prevents data leakage between processes. 2) Limits damage from compromised components. 3) Supports multi-user and multi-tenant environments.','1) يمنع تسرب البيانات بين العمليات. 2) يحدّ من ضرر المكوّنات المخترقة. 3) يدعم البيئات متعددة المستخدمين والمستأجرين.','هذه الأسباب الثلاثة هي ما تطلبه الأسئلة المقالية عادة.')
+]},
+
+{n:6,te:'Types of Isolation',ta:'أنواع العزل',
+orig:['Types of Isolation','Process Isolation.','Memory Isolation.','Privilege Isolation.'],
+trans:['أنواع العزل','عزل العمليات.','عزل الذاكرة.','عزل الصلاحيات.'],
+explain:`<p>هذه الشريحة هي <b>القلب</b> للفصل: ثلاثة أنواع. أسهل طريقة للتفريق بينها ثلاثة أسئلة:</p>
+<ul><li><b>Process Isolation (عزل العمليات):</b> <b>من يعمل؟</b> كل برنامج يعمل منفصلًا عن غيره.</li>
+<li><b>Memory Isolation (عزل الذاكرة):</b> <b>أين تُخزَّن البيانات؟</b> كل عملية لها ذاكرتها الخاصة ولا تدخل ذاكرة غيرها.</li>
+<li><b>Privilege Isolation (عزل الصلاحيات):</b> <b>ماذا يحق له أن يفعل؟</b> المستخدم العادي غير المدير.</li></ul>
+<div class="tip">💡 <b>مثال الشركة:</b> الموظفون = عمليات (كل واحد يعمل لوحده)، الخزائن = ذاكرة (لكل موظف خزانته)، والمفاتيح = صلاحيات (المدير فقط يفتح غرفة الأرشيف).</div>
+<div class="link-tip">📌 احفظ الثلاثي بالإنجليزي: <b>Process – Memory – Privilege</b> واختصاره <b>PMP</b>.</div>`,
+quiz:[
+mcq('Which of the following is a type of isolation in this chapter?','أي مما يلي نوع من أنواع العزل في هذا الفصل؟',[['Privilege isolation','عزل الصلاحيات'],['Storage isolation','عزل التخزين'],['Power isolation','عزل الطاقة'],['Display isolation','عزل الشاشة']],0,'الأنواع الثلاثة فقط: Process وMemory وPrivilege.'),
+mcq('The question "what is a user allowed to do?" relates to which type?','سؤال «ماذا يحق للمستخدم أن يفعل؟» يرتبط بأي نوع؟',[['Privilege isolation','عزل الصلاحيات'],['Memory isolation','عزل الذاكرة'],['Process isolation','عزل العمليات'],['None of them','لا شيء منها']],0,'الصلاحيات تحدد ما يُسمح لكل مستخدم أو برنامج بفعله.'),
+tf('Memory isolation is one of the three types of isolation.','عزل الذاكرة أحد أنواع العزل الثلاثة.',true,'صحيح.'),
+sa('Name the three types and give a one-line meaning for each.','اذكر الأنواع الثلاثة مع معنى مختصر لكل نوع.','Process: each process runs separately. Memory: one process cannot access another process memory. Privilege: separating user rights levels.','العمليات: كل عملية تعمل منفصلة. الذاكرة: لا تصل عملية لذاكرة عملية أخرى. الصلاحيات: فصل مستويات حقوق المستخدمين.','التعريفات التفصيلية في الصفحات القادمة.')
+]},
+
+{n:7,te:'Process Isolation',ta:'عزل العمليات',
+orig:['Process Isolation','Each process runs independently.','Prevents one process from interfering with another.','Enforced by operating systems.'],
+trans:['عزل العمليات','كل عملية تعمل بشكل مستقل.','يمنع عملية من التدخل في عملية أخرى.','يفرضه نظام التشغيل.'],
+explain:`<p><b>ما هي العملية (Process)؟</b> هي «برنامج قيد التشغيل». مثل: المتصفح، وبرنامج الموسيقى، كلٌّ عملية.</p>
+<p><b>الفكرة:</b> كل عملية تعمل في «فقاعة» خاصة بها:</p>
+<ul><li><b>مستقلة:</b> لو علقت عملية أو اخترقت، لا تسحب غيرها معها.</li>
+<li><b>لا تتدخل:</b> لا تعدّل ولا تعطل عملية أخرى.</li>
+<li><b>الذي يفرض ذلك:</b> <b>نظام التشغيل (OS)</b> هو «الحكم» الذي يطبّق القواعد، وليس البرامج نفسها.</li></ul>
+<div class="tip">💡 <b>ربط:</b> مطبخ مطعم فيه عدة طهاة، كل طاهٍ له محطته. لو احترق طبق عند أحدهم لا تتوقف باقي المحطات، والمدير (نظام التشغيل) يضمن أن لا أحد يعبث بمحطة غيره.</div>`,
+quiz:[
+mcq('Who enforces process isolation?','من الذي يفرض عزل العمليات؟',[['The operating system','نظام التشغيل'],['The user','المستخدم'],['The application itself','التطبيق نفسه'],['The internet provider','مزوّد الإنترنت']],0,'الشريحة: Enforced by operating systems.'),
+tf('In process isolation, a process can interfere with others if it is trusted.','في عزل العمليات يمكن للعملية أن تتدخل في غيرها إذا كانت موثوقة.',false,'خطأ، الهدف منع تدخل أي عملية في أخرى: Prevents one process from interfering with another.'),
+sa('What does "each process runs independently" mean?','ماذا تعني عبارة «كل عملية تعمل بشكل مستقل»؟','Each process runs on its own without depending on or affecting other processes, so a failure in one does not spread.','أن كل عملية تعمل بذاتها دون الاعتماد على غيرها أو التأثير فيها، فلا ينتقل خلل أحدها لغيرها.','الاستقلال يعني أن الخلل أو الاختراق يبقى محصورًا في العملية المتأثرة.')
+]},
+
+{n:8,te:'Mechanisms of Process Isolation',ta:'آليات عزل العمليات',
+orig:['Mechanisms of Process Isolation','Separate address spaces.','Inter-process communication (IPC) with controlled interfaces.','Use of sandboxes or containers.'],
+trans:['آليات عزل العمليات','مساحات عناوين منفصلة.','التواصل بين العمليات (IPC) عبر واجهات مضبوطة.','استخدام صناديق الحماية (Sandboxes) أو الحاويات (Containers).'],
+explain:`<p>كيف ينفّذ نظام التشغيل عزل العمليات؟ بثلاث أدوات:</p>
+<ul><li><b>① مساحات عناوين منفصلة (Separate address spaces):</b> لكل عملية «خريطة عناوين ذاكرة» خاصة تراها وكأنها الوحيدة في الجهاز. لا تعرف ولا ترى عناوين غيرها.</li>
+<li><b>② التواصل المضبوط (IPC):</b> العزل لا يعني القطيعة التامة! العمليات قد تحتاج تبادل معلومات، لكن عبر <b>قنوات رسمية مراقبة</b> (Controlled interfaces) مثل الأنابيب (pipes) والرسائل، وليس بالدخول المباشر لذاكرة الآخر.</li>
+<li><b>③ صناديق الحماية والحاويات:</b> بيئة مغلقة تُشغَّل بها العملية بصلاحيات ومساحة محدودة.</li></ul>
+<div class="tip">💡 <b>ربط:</b> السجن والزيارات: كل نزيل في زنزانته (address space)، وإن أراد التواصل فعبر نافذة الزيارة المراقبة (IPC)، والغرفة الزجاجية المغلقة هي الصندوق (Sandbox).</div>`,
+quiz:[
+mcq('Which of the following is a mechanism of process isolation?','أي مما يلي آلية من آليات عزل العمليات؟',[['Separate address spaces','مساحات عناوين منفصلة'],['Shared memory for all processes','ذاكرة مشتركة لجميع العمليات'],['Disabling the operating system','تعطيل نظام التشغيل'],['Removing user accounts','حذف حسابات المستخدمين']],0,'أول آلية مذكورة: Separate address spaces.'),
+tf('Under process isolation, processes cannot communicate at all.','في عزل العمليات لا تستطيع العمليات التواصل إطلاقًا.',false,'خطأ، يمكنها التواصل عبر IPC لكن من خلال واجهات مضبوطة (controlled interfaces).'),
+mcq('What is the purpose of sandboxes or containers here?','ما الغرض من صناديق الحماية أو الحاويات هنا؟',[['Running processes in restricted, separated environments','تشغيل العمليات في بيئات مقيّدة ومنفصلة'],['Increasing network speed','زيادة سرعة الشبكة'],['Storing backups','تخزين النسخ الاحتياطية'],['Printing documents','طباعة المستندات']],0,'هي وسيلة لعزل العملية في بيئة محدودة.'),
+sa('What is IPC and why must its interfaces be controlled?','ما هو IPC ولماذا يجب أن تكون واجهاته مضبوطة؟','IPC (Inter-process communication) lets processes exchange data; controlled interfaces ensure communication is allowed only through safe, defined channels so isolation is not broken.','IPC هو التواصل بين العمليات لتبادل البيانات؛ وتُضبط واجهاته ليكون التواصل عبر قنوات آمنة ومحددة فقط حتى لا ينكسر العزل.','لو سُمح بتواصل حرّ لضاع معنى العزل.')
+]},
+
+{n:9,te:'Case Study: Web Browsers',ta:'دراسة حالة: متصفحات الويب',
+orig:['Case Study: Web Browsers','Modern browsers isolate each tab as a process.','Prevents one tab’s crash from affecting others.'],
+trans:['دراسة حالة: متصفحات الويب','المتصفحات الحديثة تعزل كل تبويب (Tab) كعملية مستقلة.','يمنع انهيار تبويب واحد من التأثير على بقية التبويبات.'],
+explain:`<p>هذا <b>تطبيق عملي</b> لعزل العمليات، وغالبًا يأتي كمثال في الاختبار.</p>
+<ul><li>في المتصفحات الحديثة (مثل Chrome) كل <b>تبويب = عملية مستقلة</b>.</li>
+<li>لو علق موقع أو انهار في تبويب، تظهر رسالة «هذه الصفحة لا تستجيب» <b>لهذا التبويب فقط</b> وتبقى بقية التبويبات تعمل.</li>
+<li>فائدة أمنية إضافية: موقع خبيث في تبويب لا يستطيع قراءة بيانات تبويب البنك مباشرة.</li></ul>
+<div class="tip">💡 <b>ربط:</b> بدل أن تضع كل الركاب في غرفة واحدة، لكل راكب مقصورة. تعطل مقصورة لا يوقف القطار.</div>`,
+quiz:[
+mcq('How do modern browsers apply process isolation?','كيف تطبّق المتصفحات الحديثة عزل العمليات؟',[['Each tab runs as a separate process','كل تبويب يعمل كعملية منفصلة'],['All tabs share one process','كل التبويبات تشترك في عملية واحدة'],['Only the first tab is isolated','أول تبويب فقط معزول'],['Browsers block all websites','المتصفحات تحظر كل المواقع']],0,'Modern browsers isolate each tab as a process.'),
+tf('If one tab crashes in a modern browser, all other tabs crash too.','إذا انهار تبويب في متصفح حديث فستنهار بقية التبويبات أيضًا.',false,'خطأ، فهذه ميزة العزل: Prevents one tab’s crash from affecting others.'),
+sa('Explain how browser tabs demonstrate process isolation.','اشرح كيف تُظهر تبويبات المتصفح فكرة عزل العمليات.','Each tab is its own process, so a crash or problem in one tab stays contained and does not affect the other tabs.','كل تبويب عملية مستقلة، فأي انهيار أو مشكلة تبقى محصورة فيه ولا تؤثر على بقية التبويبات.','هذا مثال على الاستقلال ومنع التداخل.')
+]},
+
+{n:10,te:'Memory Isolation',ta:'عزل الذاكرة',
+orig:['Memory Isolation','Ensures one process cannot access memory of another.','Achieved using virtual memory systems.','Protects against buffer overflow attacks.'],
+trans:['عزل الذاكرة','يضمن ألا تتمكن عملية من الوصول إلى ذاكرة عملية أخرى.','يتحقق باستخدام أنظمة الذاكرة الافتراضية.','يحمي من هجمات تجاوز سعة المخزن المؤقت (Buffer Overflow).'],
+explain:`<p><b>الذاكرة (RAM)</b> هي المكان الذي تضع فيه كل عملية بياناتها أثناء العمل (كلمات سر، ملفات مفتوحة...). عزل الذاكرة يعني:</p>
+<ul><li><b>لا وصول للآخرين:</b> عملية لا تقرأ ولا تكتب في ذاكرة عملية أخرى.</li>
+<li><b>الأداة: الذاكرة الافتراضية (Virtual Memory):</b> كل عملية ترى «ذاكرة وهمية» خاصة بها، ونظام التشغيل يترجمها إلى مواقع حقيقية مختلفة لكل عملية.</li>
+<li><b>الحماية من Buffer Overflow:</b> هو هجوم يكتب فيه المهاجم بيانات أكثر من سعة المخزن فتتعدى إلى ذاكرة مجاورة. العزل يحصر الضرر داخل ذاكرة العملية المصابة ولا يصل لغيرها.</li></ul>
+<div class="tip">💡 <b>ربط:</b> دفاتر الطلاب: لكل طالب دفتره، ولو كتب أحدهم أكثر من اللازم وتجاوز صفحته لا يصل إلى دفتر زميله.</div>
+<div class="link-tip">📌 الفرق عن الصفحة 7: العمليات = من يعمل، والذاكرة = ما يخزّنه.</div>`,
+quiz:[
+mcq('Memory isolation ensures that:','عزل الذاكرة يضمن أن:',[['One process cannot access the memory of another','عملية لا تصل إلى ذاكرة عملية أخرى'],['All processes share the same memory','كل العمليات تشترك في الذاكرة نفسها'],['Memory is never used','لا تُستخدم الذاكرة أبدًا'],['The disk is encrypted','القرص مشفّر']],0,'تعريف الشريحة: Ensures one process cannot access memory of another.'),
+mcq('Memory isolation is achieved using:','يتحقق عزل الذاكرة باستخدام:',[['Virtual memory systems','أنظمة الذاكرة الافتراضية'],['Larger hard drives','أقراص صلبة أكبر'],['Faster internet','إنترنت أسرع'],['Screen savers','شاشات التوقف']],0,'Achieved using virtual memory systems.'),
+tf('Memory isolation helps protect against buffer overflow attacks.','عزل الذاكرة يساعد في الحماية من هجمات Buffer Overflow.',true,'صحيح حسب الشريحة. والمقصود أنه يحصر الضرر داخل ذاكرة العملية المصابة.'),
+sa('What is the goal of memory isolation and which technique achieves it?','ما هدف عزل الذاكرة وما التقنية التي تحققه؟','Goal: prevent a process from accessing another process memory. Technique: virtual memory systems.','الهدف: منع أي عملية من الوصول إلى ذاكرة عملية أخرى. التقنية: أنظمة الذاكرة الافتراضية.','سؤال تعريف مباشر.')
+]},
+
+{n:11,te:'Memory Isolation in Practice',ta:'عزل الذاكرة عمليًا',
+orig:['Memory Isolation in Practice','Page tables and memory segmentation.','Hardware support through MMU (Memory Management Unit).','Prevents data leaks and memory corruption.'],
+trans:['عزل الذاكرة عمليًا','جداول الصفحات (Page Tables) وتقسيم الذاكرة (Segmentation).','دعم العتاد عبر وحدة إدارة الذاكرة (MMU).','يمنع تسرّب البيانات وتلف الذاكرة.'],
+explain:`<p>هذه الصفحة تشرح <b>كيف</b> تُنفَّذ الذاكرة الافتراضية فعليًا:</p>
+<ul><li><b>جداول الصفحات (Page Tables):</b> «دفتر ترجمة» لكل عملية يحوّل العناوين الوهمية التي تراها إلى مواقع حقيقية في الذاكرة. ولأن لكل عملية دفترها، تذهب عناوينها إلى أماكن مختلفة.</li>
+<li><b>تقسيم الذاكرة (Segmentation):</b> تقسيم الذاكرة إلى أجزاء (كود، بيانات، مكدس...) لكل جزء حدود وصلاحيات.</li>
+<li><b>وحدة MMU (Memory Management Unit):</b> قطعة <b>عتاد (Hardware)</b> تُجري الترجمة وتفحص الحدود بسرعة. أي أن العزل ليس برمجيًا فقط، بل مدعوم بالعتاد.</li>
+<li><b>النتيجة:</b> يمنع <b>تسرب البيانات (Data leaks)</b> و<b>تلف الذاكرة (Memory corruption)</b>.</li></ul>
+<div class="tip">💡 <b>ربط:</b> MMU مثل حارس البوابة: يفحص كل بطاقة (عنوان) ويقول هل هذا الدخول مسموح؟ وإلا يمنعه فورًا.</div>`,
+quiz:[
+mcq('What does MMU stand for?','ماذا يعني اختصار MMU؟',[['Memory Management Unit','وحدة إدارة الذاكرة'],['Main Memory Update','تحديث الذاكرة الرئيسية'],['Multi Machine Utility','أداة متعددة الأجهزة'],['Managed Mobile Unit','وحدة محمولة مُدارة']],0,'المذكور: Memory Management Unit.'),
+tf('Memory isolation relies only on software and has no hardware support.','يعتمد عزل الذاكرة على البرمجيات فقط ولا دعم عتادي له.',false,'خطأ، الشريحة تذكر Hardware support through MMU.'),
+mcq('Which techniques are mentioned for memory isolation in practice?','ما التقنيات المذكورة لعزل الذاكرة عمليًا؟',[['Page tables and memory segmentation','جداول الصفحات وتقسيم الذاكرة'],['Firewalls and antivirus','جدران الحماية ومضاد الفيروسات'],['Encryption and hashing','التشفير والتجزئة'],['Cables and routers','الكابلات والموجّهات']],0,'Page tables and memory segmentation.'),
+sa('What two problems does memory isolation prevent in practice?','ما المشكلتان اللتان يمنعهما عزل الذاكرة عمليًا؟','Data leaks and memory corruption.','تسرب البيانات وتلف الذاكرة.','النقطة الأخيرة في الشريحة.')
+]},
+
+{n:12,te:'Example: Virtual Machines',ta:'مثال: الأجهزة الافتراضية',
+orig:['Example: Virtual Machines','Each VM has isolated memory.','Hypervisor enforces separation.'],
+trans:['مثال: الأجهزة الافتراضية (VMs)','كل جهاز افتراضي له ذاكرة معزولة.','المراقب الافتراضي (Hypervisor) يفرض الفصل.'],
+explain:`<p><b>الجهاز الافتراضي (VM):</b> جهاز حاسوب «برمجي» يعمل داخل جهاز حقيقي. يمكن تشغيل عدة أجهزة افتراضية على جهاز فعلي واحد (مثل ويندوز ولينكس معًا).</p>
+<ul><li><b>ذاكرة معزولة لكل VM:</b> ما بداخل VM لا يراه VM آخر.</li>
+<li><b>Hypervisor:</b> هو «المدير» برنامج يوزع الموارد ويفرض الفصل بين الأجهزة الافتراضية، كما يفرض نظام التشغيل الفصل بين العمليات.</li></ul>
+<div class="tip">💡 <b>ربط:</b> مبنى به عدة شقق (VMs) والحارس/المالك (Hypervisor) يضمن ألا يدخل أحد شقة جاره.</div>
+<div class="link-tip">📌 سترى Hypervisor مرة أخرى في صفحة 19 مع «العزل المعتمد على Hypervisor».</div>`,
+quiz:[
+mcq('What component enforces separation between virtual machines?','ما المكوّن الذي يفرض الفصل بين الأجهزة الافتراضية؟',[['Hypervisor','الهايبرفايزر'],['Browser','المتصفح'],['Router','الموجّه'],['Keyboard','لوحة المفاتيح']],0,'Hypervisor enforces separation.'),
+tf('All virtual machines share one common memory space.','تشترك كل الأجهزة الافتراضية في مساحة ذاكرة واحدة مشتركة.',false,'خطأ، Each VM has isolated memory.'),
+sa('How do virtual machines illustrate memory isolation?','كيف توضّح الأجهزة الافتراضية عزل الذاكرة؟','Each VM has its own isolated memory, and the hypervisor enforces separation so one VM cannot access another.','لكل جهاز افتراضي ذاكرته المعزولة والهايبرفايزر يفرض الفصل فلا يصل أحدها للآخر.','مثال تطبيقي على عزل الذاكرة.')
+]},
+
+{n:13,te:'Privilege Isolation',ta:'عزل الصلاحيات',
+orig:['Privilege Isolation','Separating different levels of user rights.','Prevents regular users from executing admin tasks.','Achieved using privilege rings or user vs kernel mode.'],
+trans:['عزل الصلاحيات','فصل المستويات المختلفة من حقوق المستخدمين.','يمنع المستخدمين العاديين من تنفيذ مهام إدارية.','يتحقق باستخدام حلقات الصلاحيات (Privilege Rings) أو وضع المستخدم مقابل وضع النواة.'],
+explain:`<p><b>الصلاحية (Privilege)</b> = ما يُسمح لك بفعله في النظام. ليس كل أحد يجب أن يملك كل شيء.</p>
+<ul><li><b>الفكرة:</b> فصل مستويات الحقوق: مستخدم عادي، مدير (Admin)، نظام التشغيل نفسه.</li>
+<li><b>الفائدة:</b> المستخدم العادي لا يستطيع تنفيذ مهام إدارية (مثل تثبيت برنامج على مستوى النظام أو حذف ملفات النظام).</li>
+<li><b>الوسيلة:</b> <b>حلقات الصلاحيات (Privilege Rings):</b> دوائر متداخلة؛ الداخلية (النواة Kernel) الأقوى والأخطر، والخارجية (برامج المستخدم) الأضعف. أو <b>وضع المستخدم مقابل وضع النواة</b> (User vs Kernel mode).</li></ul>
+<div class="tip">💡 <b>ربط:</b> المستشفى: الممرض يعطي دواءً محددًا، لكن العمليات الجراحية للجرّاح فقط. ومفتاح غرفة الأدوية الخطرة لا يُسلَّم للجميع.</div>`,
+quiz:[
+mcq('Privilege isolation is about:','عزل الصلاحيات يتعلق بـ:',[['Separating different levels of user rights','فصل مستويات حقوق المستخدمين المختلفة'],['Separating hardware cables','فصل كابلات العتاد'],['Separating files by size','فصل الملفات حسب الحجم'],['Separating browsers','فصل المتصفحات']],0,'Separating different levels of user rights.'),
+tf('Privilege isolation allows regular users to execute admin tasks.','عزل الصلاحيات يسمح للمستخدمين العاديين بتنفيذ مهام إدارية.',false,'خطأ، بل يمنعهم: Prevents regular users from executing admin tasks.'),
+mcq('Which mechanisms achieve privilege isolation?','أي الآليات تحقق عزل الصلاحيات؟',[['Privilege rings or user vs kernel mode','حلقات الصلاحيات أو وضع المستخدم مقابل النواة'],['Page tables only','جداول الصفحات فقط'],['Wi-Fi encryption','تشفير الواي فاي'],['Screen brightness','سطوع الشاشة']],0,'Achieved using privilege rings or user vs kernel mode.'),
+sa('Why must regular users be prevented from executing admin tasks?','لماذا يجب منع المستخدمين العاديين من تنفيذ المهام الإدارية؟','Because admin tasks can change or damage the whole system; limiting rights protects the system from mistakes and misuse.','لأن المهام الإدارية قد تغيّر النظام كله أو تضرّه؛ وتقييد الحقوق يحميه من الأخطاء وسوء الاستخدام.','الصفحة تنص على المنع، والسبب هو حماية النظام (استنتاج من مبدأ العزل).')
+]},
+
+{n:14,te:'Privilege Isolation in Operating Systems',ta:'عزل الصلاحيات في أنظمة التشغيل',
+orig:['Privilege Isolation in Operating Systems','User mode vs kernel mode.','Least privilege principle applied to accounts.','Admins vs standard users.'],
+trans:['عزل الصلاحيات في أنظمة التشغيل','وضع المستخدم مقابل وضع النواة.','تطبيق مبدأ أقل صلاحية (Least Privilege) على الحسابات.','المدراء مقابل المستخدمين العاديين.'],
+explain:`<p>كيف يظهر عزل الصلاحيات داخل نظام التشغيل؟ ثلاثة أشكال:</p>
+<ul><li><b>① User mode vs Kernel mode:</b> <b>Kernel mode</b> وضع قوي جدًا (نواة النظام) يصل لكل العتاد والذاكرة. <b>User mode</b> وضع محدود تعمل فيه البرامج العادية. إن احتاج برنامج أمرًا حساسًا يطلبه من النواة عبر قنوات محددة.</li>
+<li><b>② مبدأ أقل صلاحية (Least Privilege):</b> امنح كل حساب <b>أقل قدر</b> من الصلاحيات يلزمه لأداء عمله فقط، لا أكثر.</li>
+<li><b>③ المدراء مقابل العاديين:</b> حساب Admin يستطيع تغييرات النظام؛ الحساب العادي لا.</li></ul>
+<div class="tip">💡 <b>ربط:</b> الموظف الجديد يأخذ بطاقة تدخل مكتبه فقط، لا بطاقة المدير العام، وهذا هو Least Privilege.</div>
+<div class="link-tip">📌 ملاحظة عن الملف: النص الأصلي لهذه الصفحة في الـ PDF ظهر بنقاط متداخلة؛ رتبته هنا بوضوح كما هو معناه.</div>`,
+quiz:[
+mcq('The least privilege principle means:','مبدأ أقل صلاحية يعني:',[['Giving accounts only the access they need','منح الحسابات الوصول الذي تحتاجه فقط'],['Giving everyone admin rights','منح الجميع صلاحيات المدير'],['Removing all accounts','حذف جميع الحسابات'],['Giving rights randomly','منح الصلاحيات عشوائيًا']],0,'Least privilege principle applied to accounts أي أقل قدر لازم من الصلاحيات.'),
+tf('Kernel mode and user mode have the same level of access.','وضع النواة ووضع المستخدم لهما نفس مستوى الوصول.',false,'خطأ، وضع النواة أقوى بكثير؛ والفصل بينهما هو أساس عزل الصلاحيات.'),
+mcq('Which pair is compared in this page?','أي زوج تقارنه هذه الصفحة؟',[['Admins vs standard users','المدراء مقابل المستخدمين العاديين'],['Hackers vs viewers','المخترقون مقابل المشاهدين'],['Servers vs printers','الخوادم مقابل الطابعات'],['Tabs vs windows','التبويبات مقابل النوافذ']],0,'ذُكرت: Admins vs standard users.'),
+sa('List the three ways privilege isolation appears in operating systems.','اذكر الأشكال الثلاثة لعزل الصلاحيات في أنظمة التشغيل.','User mode vs kernel mode; least privilege principle for accounts; admins vs standard users.','وضع المستخدم مقابل النواة؛ مبدأ أقل صلاحية للحسابات؛ المدراء مقابل المستخدمين العاديين.','هي نقاط الصفحة الثلاث.')
+]},
+
+{n:15,te:'Case Example: Database Systems',ta:'مثال حالة: أنظمة قواعد البيانات',
+orig:['Case Example: Database Systems','DB admins manage structure.','Users only access permitted queries.','Prevents privilege escalation.'],
+trans:['مثال حالة: أنظمة قواعد البيانات','مدراء قواعد البيانات يديرون البنية.','المستخدمون يصلون فقط إلى الاستعلامات المسموح بها.','يمنع تصعيد الصلاحيات (Privilege Escalation).'],
+explain:`<p>تطبيق عملي آخر لعزل الصلاحيات، في <b>قواعد البيانات (Databases)</b>:</p>
+<ul><li><b>مدير قاعدة البيانات (DB admin):</b> يدير <b>البنية</b> (إنشاء الجداول وتعديلها وحذفها وإدارة الحسابات).</li>
+<li><b>المستخدم العادي:</b> يقتصر على <b>استعلامات مسموح بها</b> (مثل قراءة بياناته أو إضافة سجل)، لا يغيّر البنية.</li>
+<li><b>تصعيد الصلاحيات (Privilege escalation):</b> أن يحصل مستخدم عادي على صلاحيات أعلى (كمدير) بطريقة غير مشروعة. الفصل الصارم بين الأدوار <b>يمنع</b> ذلك أو يصعّبه.</li></ul>
+<div class="tip">💡 <b>ربط:</b> المكتبة: أمين المكتبة يرتب الأرفف ويضيف كتبًا (يدير البنية)، والزائر يستعير كتابًا فقط (استعلام مسموح). لو استطاع الزائر أخذ مفتاح الأمين فهذا تصعيد صلاحيات.</div>`,
+quiz:[
+mcq('In a database system, who manages the structure?','في نظام قاعدة بيانات، من يدير البنية؟',[['DB admins','مدراء قواعد البيانات'],['Regular users','المستخدمون العاديون'],['Visitors','الزوار'],['Printers','الطابعات']],0,'DB admins manage structure.'),
+tf('Regular database users may run any query they want.','يمكن للمستخدمين العاديين في قاعدة البيانات تنفيذ أي استعلام يريدونه.',false,'خطأ، Users only access permitted queries.'),
+mcq('What does this separation prevent?','ماذا يمنع هذا الفصل؟',[['Privilege escalation','تصعيد الصلاحيات'],['Power outages','انقطاع الكهرباء'],['Slow queries','بطء الاستعلامات'],['Disk failure','عطل القرص']],0,'Prevents privilege escalation.'),
+sa('What is privilege escalation and how do database roles help prevent it?','ما هو تصعيد الصلاحيات وكيف تساعد أدوار قاعدة البيانات في منعه؟','Privilege escalation is gaining higher rights than allowed. Separating admin roles from user roles with limited permitted queries helps prevent it.','هو حصول مستخدم على حقوق أعلى مما يُسمح له. وفصل دور المدير عن المستخدم مع حصر الاستعلامات المسموحة يمنعه.','الإجابة تجمع التعريف والآلية.')
+]},
+
+{n:16,te:'Isolation in Operating Systems',ta:'العزل في أنظمة التشغيل',
+orig:['Isolation in Operating Systems','Processes isolated through address spaces.','System calls mediate interactions.','Prevent privilege escalation attacks.'],
+trans:['العزل في أنظمة التشغيل','تُعزل العمليات عبر مساحات العناوين.','استدعاءات النظام (System Calls) تتوسّط التفاعلات.','يمنع هجمات تصعيد الصلاحيات.'],
+explain:`<p>صفحة تجمع ما سبق داخل <b>نظام التشغيل</b>:</p>
+<ul><li><b>مساحات العناوين:</b> تعزل العمليات وذاكرتها (صفحات 8 و10).</li>
+<li><b>استدعاءات النظام (System Calls):</b> برنامج المستخدم لا يلمس العتاد أو الملفات مباشرة؛ بل «يطلب» من النواة عبر System Call (مثل: افتح الملف). والنواة تتحقق: هل مسموح؟ فهي <b>وسيط (Mediator)</b> يضبط التفاعلات.</li>
+<li><b>النتيجة:</b> منع هجمات تصعيد الصلاحيات.</li></ul>
+<div class="tip">💡 <b>ربط:</b> المطعم: الزبون (user mode) لا يدخل المطبخ، يطلب من النادل (system call) والنادل ينقل الطلب إلى المطبخ (kernel) بعد التحقق.</div>`,
+quiz:[
+mcq('What mediates interactions between user programs and the OS kernel?','ما الذي يتوسّط التفاعل بين برامج المستخدم ونواة النظام؟',[['System calls','استدعاءات النظام'],['Screensavers','شاشات التوقف'],['Email','البريد الإلكتروني'],['USB drives','أقراص USB']],0,'System calls mediate interactions.'),
+tf('In operating systems, processes are isolated through address spaces.','في أنظمة التشغيل تُعزل العمليات عبر مساحات العناوين.',true,'صحيح، هذه أول نقطة في الصفحة.'),
+sa('Why do system calls help prevent privilege escalation?','لماذا تساعد استدعاءات النظام في منع تصعيد الصلاحيات؟','Because programs cannot access protected resources directly; they must request them through system calls, which the OS checks before allowing.','لأن البرامج لا تصل للموارد المحمية مباشرة؛ بل تطلبها عبر استدعاءات يتحقق منها نظام التشغيل قبل السماح.','الاستدعاءات تجعل النظام وسيطًا يتحقق من كل طلب.')
+]},
+
+{n:17,te:'Isolation in Cloud Environments',ta:'العزل في البيئات السحابية',
+orig:['Isolation in Cloud Environments','Tenants separated in multi-cloud systems.','VMs and containers ensure workload isolation.','Critical for security in shared infrastructure.'],
+trans:['العزل في البيئات السحابية','فصل المستأجرين (Tenants) في الأنظمة متعددة السحابات.','الأجهزة الافتراضية والحاويات تضمن عزل أحمال العمل.','أمر بالغ الأهمية للأمان في البنية التحتية المشتركة.'],
+explain:`<p><b>السحابة (Cloud)</b> = موارد حاسوبية مشتركة بين عملاء كثيرين على نفس الأجهزة الفيزيائية.</p>
+<ul><li><b>المستأجرون (Tenants):</b> هم العملاء/الشركات الذين يستخدمون السحابة. يجب فصلهم تمامًا بحيث لا يرى مستأجر بيانات آخر. و<b>Multi-cloud</b> تعني استخدام أكثر من سحابة.</li>
+<li><b>الأدوات:</b> الأجهزة الافتراضية (VMs) والحاويات (Containers) تعزل <b>أحمال العمل (Workloads)</b> أي التطبيقات والخدمات التي يشغّلها كل عميل.</li>
+<li><b>لماذا حرج؟</b> لأن البنية <b>مشتركة (Shared infrastructure)</b>؛ ضعف العزل يعني احتمال تسرب بيانات بين شركات منافسة.</li></ul>
+<div class="tip">💡 <b>ربط:</b> مجمع مكاتب مشترك: عدة شركات في مبنى واحد؛ إن لم تكن الجدران والأقفال متينة سيتجسس بعضهم على بعض.</div>`,
+quiz:[
+mcq('In cloud environments, what ensures workload isolation?','في البيئات السحابية، ما الذي يضمن عزل أحمال العمل؟',[['VMs and containers','الأجهزة الافتراضية والحاويات'],['Only passwords','كلمات المرور فقط'],['Printers','الطابعات'],['Email filters','فلاتر البريد']],0,'VMs and containers ensure workload isolation.'),
+tf('Tenant isolation is critical because cloud infrastructure is shared.','عزل المستأجرين حرج لأن البنية السحابية مشتركة.',true,'صحيح: Critical for security in shared infrastructure.'),
+mcq('Who are the "tenants" in the cloud?','من هم «المستأجرون» في السحابة؟',[['Customers sharing the same cloud infrastructure','العملاء الذين يتشاركون نفس البنية السحابية'],['Hackers','المخترقون'],['Hardware vendors','موردو العتاد'],['Network cables','كابلات الشبكة']],0,'المستأجر هو عميل أو منظمة تستخدم موارد مشتركة.'),
+sa('Why is isolation especially critical in the cloud?','لماذا العزل حرج بشكل خاص في السحابة؟','Because many tenants share the same infrastructure, so weak isolation could let one tenant access or affect another.','لأن مستأجرين كثيرين يتشاركون نفس البنية، وضعف العزل قد يتيح لأحدهم الوصول لغيره أو التأثير فيه.','الصفحة تنص على أنه حرج للأمان في البنية المشتركة.')
+]},
+
+{n:18,te:'Container Isolation',ta:'عزل الحاويات',
+orig:['Container Isolation','Containers isolate applications within the same OS.','Less overhead than VMs but weaker isolation.','Useful for microservices.'],
+trans:['عزل الحاويات','الحاويات تعزل التطبيقات داخل نفس نظام التشغيل.','عبء أقل من الأجهزة الافتراضية لكن عزلها أضعف.','مفيدة للخدمات المصغّرة (Microservices).'],
+explain:`<p><b>الحاوية (Container)</b> (مثل Docker) تغلّف تطبيقًا مع ما يحتاجه، وتعزله عن غيره، لكن <b>كل الحاويات تتشارك نواة نظام التشغيل نفسه</b>.</p>
+<ul><li><b>خفيفة:</b> «عبء أقل (Less overhead)» لأنها لا تحمل نظام تشغيل كاملًا لكل واحدة، فتشغَّل بسرعة وبموارد قليلة.</li>
+<li><b>عزلها أضعف:</b> لأن النواة مشتركة، فثغرة في النواة قد تتيح للمهاجم الانتقال بين الحاويات.</li>
+<li><b>الاستخدام:</b> مناسبة جدًا للـ<b>Microservices</b> أي تقسيم التطبيق الكبير إلى خدمات صغيرة مستقلة.</li></ul>
+<div class="tip">💡 <b>ربط:</b> الحاويات = غرف في سكن مشترك، تتشارك نفس السقف والأساس (النواة): أرخص وأسرع، لكن حريق في الأساس يؤثر على الجميع.</div>
+<div class="link-tip">📌 الفرق المختصر: <b>الحاوية: أخف وأضعف عزلًا</b> / <b>VM: أثقل وأقوى عزلًا</b>.</div>`,
+quiz:[
+mcq('Compared with VMs, containers have:','مقارنةً بالأجهزة الافتراضية، تتميز الحاويات بـ:',[['Less overhead but weaker isolation','عبء أقل لكن عزل أضعف'],['More overhead and stronger isolation','عبء أكبر وعزل أقوى'],['No isolation at all','بلا أي عزل'],['Identical overhead and isolation','نفس العبء ونفس العزل']],0,'Less overhead than VMs but weaker isolation.'),
+tf('Containers isolate applications within the same operating system.','الحاويات تعزل التطبيقات داخل نفس نظام التشغيل.',true,'صحيح، وهذا سبب ضعف عزلها النسبي لأنها تتشارك النواة.'),
+mcq('Containers are particularly useful for:','الحاويات مفيدة بشكل خاص لـ:',[['Microservices','الخدمات المصغّرة'],['Printing','الطباعة'],['Hardware repair','إصلاح العتاد'],['Wi-Fi setup','إعداد الواي فاي']],0,'Useful for microservices.'),
+sa('Explain why container isolation is weaker than VM isolation.','اشرح لماذا عزل الحاويات أضعف من عزل الأجهزة الافتراضية.','Containers share the same operating system (kernel), while VMs are separated at the hardware level by a hypervisor, so a kernel weakness can affect all containers.','لأن الحاويات تتشارك نفس نظام التشغيل (النواة)، بينما تُعزل الأجهزة الافتراضية على مستوى العتاد بواسطة Hypervisor، فخلل في النواة قد يؤثر على كل الحاويات.','الصفحة تقول «within the same OS» ثم «weaker isolation»، والربط بينهما هو سبب الضعف.')
+]},
+
+{n:19,te:'Hypervisor-Based Isolation',ta:'العزل المعتمد على الهايبرفايزر',
+orig:['Hypervisor-Based Isolation','Each VM isolated at hardware level.','Provides stronger security.','Used in cloud hosting environments.'],
+trans:['العزل المعتمد على الهايبرفايزر','كل جهاز افتراضي معزول على مستوى العتاد.','يوفر أمانًا أقوى.','يُستخدم في بيئات الاستضافة السحابية.'],
+explain:`<p>هنا الوجه المقابل للحاويات:</p>
+<ul><li><b>Hypervisor:</b> طبقة برمجية تعمل فوق العتاد وتوزع الموارد على الأجهزة الافتراضية.</li>
+<li><b>كل VM معزول عند مستوى العتاد:</b> لكل VM نظام تشغيله الكامل وذاكرته، والفصل مفروض من الهايبرفايزر وبدعم العتاد.</li>
+<li><b>أمان أقوى:</b> لأن المهاجم يحتاج لاختراق الجهاز الافتراضي ثم تجاوز الهايبرفايزر، وهذا أصعب.</li>
+<li><b>الاستخدام:</b> في الاستضافة السحابية (Cloud hosting) حيث عملاء كثيرون على نفس الخادم.</li></ul>
+<div class="tip">💡 <b>ربط:</b> فيلات منفصلة في مجمع: كل فيلا لها أساسها وجدرانها (نظام تشغيل مستقل)، والحارس العام هو الهايبرفايزر. أغلى وأثقل من الغرف المشتركة، لكن أكثر أمانًا.</div>
+<div class="link-tip">📌 جدول سريع: <b>VM</b> = عزل أقوى / موارد أكثر. <b>Container</b> = عزل أضعف / خفيف وسريع.</div>`,
+quiz:[
+mcq('Hypervisor-based isolation isolates each VM at which level?','العزل المعتمد على الهايبرفايزر يعزل كل جهاز افتراضي على أي مستوى؟',[['Hardware level','مستوى العتاد'],['Screen level','مستوى الشاشة'],['Password level','مستوى كلمة المرور'],['Printer level','مستوى الطابعة']],0,'Each VM isolated at hardware level.'),
+tf('Hypervisor-based isolation provides stronger security than container isolation.','العزل المعتمد على الهايبرفايزر يوفر أمانًا أقوى من عزل الحاويات.',true,'صحيح، فالصفحة تقول Provides stronger security، والصفحة السابقة وصفت الحاويات بأنها أضعف عزلًا.'),
+mcq('Where is hypervisor-based isolation commonly used?','أين يُستخدم العزل المعتمد على الهايبرفايزر عادةً؟',[['Cloud hosting environments','بيئات الاستضافة السحابية'],['Calculators','الآلات الحاسبة'],['Digital watches','الساعات الرقمية'],['Game controllers','أذرع الألعاب']],0,'Used in cloud hosting environments.'),
+sa('Compare container isolation with hypervisor-based isolation.','قارن بين عزل الحاويات والعزل المعتمد على الهايبرفايزر.','Containers: share the same OS, less overhead, weaker isolation, good for microservices. Hypervisor-based VMs: isolated at hardware level, stronger security, more overhead, used in cloud hosting.','الحاويات: تتشارك نفس نظام التشغيل، عبء أقل، عزل أضعف، مناسبة للخدمات المصغّرة. الهايبرفايزر/VMs: عزل على مستوى العتاد، أمان أقوى، عبء أكبر، تُستخدم في الاستضافة السحابية.','سؤال مقارنة مرشح بقوة للأسئلة المقالية.')
+]},
+
+{n:20,te:'Challenges in Cloud Isolation',ta:'تحديات العزل السحابي',
+orig:['Challenges in Cloud Isolation','Side-channel attacks.','Shared hardware risks.','Somplexity of multi-tenant management.'],
+trans:['تحديات العزل السحابي','هجمات القنوات الجانبية (Side-channel attacks).','مخاطر العتاد المشترك.','تعقيد إدارة البيئات متعددة المستأجرين.'],
+explain:`<p>رغم قوة العزل، هناك تحديات في السحابة:</p>
+<ul><li><b>① Side-channel attacks:</b> هجوم لا يخترق «الباب» مباشرة، بل <b>يستنتج</b> معلومات سرية من آثار جانبية مثل توقيت العمليات أو استهلاك الطاقة أو حالة ذاكرة المعالج المؤقتة.</li>
+<li><b>② مخاطر العتاد المشترك:</b> عدة عملاء على نفس المعالج والذاكرة الفيزيائية، فقد تتسرب معلومات عبر هذه الموارد المشتركة.</li>
+<li><b>③ تعقيد الإدارة:</b> ضبط وفصل ومراقبة مئات المستأجرين صعب وقابل للأخطاء.</li></ul>
+<div class="tip">💡 <b>ربط:</b> جيران في شقتين متجاورتين، لا يستطيعون دخول شقتك لكن يمكنهم أن <b>يسمعوا</b> صوتك عبر الجدار. هذا هو الـ Side channel: تسريب غير مباشر.</div>
+<div class="link-tip">📌 ملاحظة: كلمة «Somplexity» في النص الأصلي خطأ مطبعي والمقصود <b>Complexity</b>.</div>`,
+quiz:[
+mcq('Which is a challenge in cloud isolation?','أي مما يلي تحدٍّ في العزل السحابي؟',[['Side-channel attacks','هجمات القنوات الجانبية'],['Too few tenants','قلة المستأجرين'],['Unlimited memory','ذاكرة غير محدودة'],['No hardware at all','عدم وجود عتاد']],0,'أول تحدٍّ: Side-channel attacks.'),
+tf('Shared hardware is considered a risk to isolation in the cloud.','العتاد المشترك يُعدّ خطرًا على العزل في السحابة.',true,'صحيح: Shared hardware risks.'),
+mcq('The "complexity" challenge relates to:','تحدّي «التعقيد» يتعلق بـ:',[['Multi-tenant management','إدارة البيئات متعددة المستأجرين'],['Keyboard design','تصميم لوحة المفاتيح'],['Screen resolution','دقة الشاشة'],['Paper size','حجم الورق']],0,'Complexity of multi-tenant management.'),
+sa('Briefly describe the three challenges in cloud isolation.','صف باختصار التحديات الثلاثة في العزل السحابي.','Side-channel attacks (leaking info indirectly), shared hardware risks, and complexity of managing many tenants.','هجمات القنوات الجانبية (تسريب غير مباشر)، ومخاطر العتاد المشترك، وتعقيد إدارة المستأجرين المتعددين.','تُحفظ كالتالي: هجوم، عتاد، إدارة.')
+]},
+
+{n:21,te:'Benefits of Isolation',ta:'فوائد العزل',
+orig:['Benefits of Isolation','Improves security by containing attacks.','Enhances reliability and stability.','Supports multi-user systems.'],
+trans:['فوائد العزل','يحسّن الأمان عن طريق احتواء الهجمات.','يعزز الموثوقية والاستقرار.','يدعم الأنظمة متعددة المستخدمين.'],
+explain:`<p>تلخيص فوائد العزل في ثلاث نقاط:</p>
+<ul><li><b>① الأمان بـ«احتواء الهجمات»:</b> إن نجح مهاجم باختراق جزء، يبقى محصورًا فيه.</li>
+<li><b>② الموثوقية والاستقرار:</b> الأعطال لا تنتشر؛ لو علق برنامج يبقى النظام يعمل.</li>
+<li><b>③ دعم الأنظمة متعددة المستخدمين:</b> يتشارك الناس جهازًا واحدًا بأمان دون أن يتجسس بعضهم على بعض.</li></ul>
+<div class="tip">💡 <b>ربط بصفحة 5:</b> هذه الفوائد تشبه «أهمية العزل»، لكن هنا نركز على الأثر: <b>أمان + استقرار + مستخدمون كثيرون</b>.</div>`,
+quiz:[
+mcq('Isolation improves security by:','يحسّن العزل الأمان عن طريق:',[['Containing attacks','احتواء الهجمات'],['Hiding the screen','إخفاء الشاشة'],['Turning off the computer','إطفاء الحاسوب'],['Deleting logs','حذف السجلات']],0,'Improves security by containing attacks.'),
+tf('Isolation enhances reliability and stability.','العزل يعزز الموثوقية والاستقرار.',true,'صحيح.'),
+tf('Isolation makes multi-user systems less safe.','العزل يجعل الأنظمة متعددة المستخدمين أقل أمانًا.',false,'خطأ، بل يدعمها: Supports multi-user systems.'),
+sa('List the three benefits of isolation.','اذكر الفوائد الثلاث للعزل.','Improves security by containing attacks; enhances reliability and stability; supports multi-user systems.','يحسّن الأمان باحتواء الهجمات؛ يعزز الموثوقية والاستقرار؛ يدعم الأنظمة متعددة المستخدمين.','')
+]},
+
+{n:22,te:'Limitations of Isolation',ta:'قيود العزل',
+orig:['Limitations of Isolation','Performance overhead.','Complexity in implementation.','Not foolproof (attackers can still bypass isolation using side-channel attacks, covert channels, or shared resource leaks).'],
+trans:['قيود العزل','عبء على الأداء.','تعقيد في التنفيذ.','ليس مضمونًا بالكامل (لا يزال بإمكان المهاجمين تجاوز العزل باستخدام هجمات القنوات الجانبية أو القنوات الخفية أو تسريبات الموارد المشتركة).'],
+explain:`<p>العزل ليس سحرًا. له ثلاثة قيود:</p>
+<ul><li><b>① عبء الأداء (Performance overhead):</b> الفحص والترجمة والفصل يستهلك وقتًا وموارد، فيبطّئ النظام قليلًا.</li>
+<li><b>② تعقيد التنفيذ:</b> بناء وضبط الحدود بين المكوّنات صعب، وأي خطأ في الإعداد يخلق ثغرة.</li>
+<li><b>③ ليس مضمونًا (Not foolproof):</b> المهاجم قد يتجاوزه عبر:
+  <ul><li><b>Side-channel attacks:</b> استنتاج أسرار من آثار جانبية كالتوقيت.</li>
+  <li><b>Covert channels:</b> قنوات سرّية يستخدمها برنامجان متواطئان لتمرير معلومات بطرق غير مقصودة في التصميم.</li>
+  <li><b>Shared resource leaks:</b> تسريب عبر موارد مشتركة (معالج، ذاكرة مؤقتة...).</li></ul></li></ul>
+<div class="tip">💡 <b>ربط:</b> الجدار يمنع الدخول، لكن قد يمرر الصوت (Side channel)، أو يتفق شخصان على إشارات بالطرق على الجدار (Covert channel)، أو تتسرب رائحة عبر مجرى تهوية مشترك (Shared resource leak).</div>`,
+quiz:[
+mcq('Which is a limitation of isolation?','أي مما يلي قيد من قيود العزل؟',[['Performance overhead','عبء على الأداء'],['It deletes data','يحذف البيانات'],['It disables users','يعطّل المستخدمين'],['It needs no configuration','لا يحتاج أي إعداد']],0,'أول قيد: Performance overhead.'),
+tf('Isolation is completely foolproof and can never be bypassed.','العزل مضمون بالكامل ولا يمكن تجاوزه أبدًا.',false,'خطأ، الشريحة تقول Not foolproof ويمكن تجاوزه عبر عدة طرق.'),
+mcq('Which of the following can be used to bypass isolation?','أي مما يلي يمكن استخدامه لتجاوز العزل؟',[['Covert channels','القنوات الخفية'],['Strong passwords','كلمات المرور القوية'],['Hardware MMU','وحدة MMU العتادية'],['Least privilege','أقل صلاحية']],0,'ذُكرت: side-channel attacks وcovert channels وshared resource leaks.'),
+sa('Name the three limitations and three ways attackers can bypass isolation.','اذكر القيود الثلاثة وثلاث طرق قد يتجاوز بها المهاجمون العزل.','Limitations: performance overhead, complexity in implementation, not foolproof. Bypass: side-channel attacks, covert channels, shared resource leaks.','القيود: عبء الأداء، تعقيد التنفيذ، عدم الضمان الكامل. طرق التجاوز: القنوات الجانبية، القنوات الخفية، تسريبات الموارد المشتركة.','هذه من أكثر الصفحات ورودًا في الأسئلة المقالية.')
+]},
+
+{n:23,te:'Balancing Isolation with Usability',ta:'الموازنة بين العزل وسهولة الاستخدام',
+orig:['Balancing Isolation with Usability','Too much isolation increases complexity.','Trade-offs between security and performance.','Best applied with layered defense.'],
+trans:['الموازنة بين العزل وسهولة الاستخدام','الإفراط في العزل يزيد التعقيد.','مفاضلات بين الأمان والأداء.','يُطبَّق على أفضل وجه ضمن دفاع متعدد الطبقات.'],
+explain:`<p>الأمان ليس «كلما زاد العزل كان أفضل» دائمًا:</p>
+<ul><li><b>الإفراط يزيد التعقيد:</b> لو عزلت كل شيء عن كل شيء، يصعب التواصل والإدارة، وتزيد الأخطاء.</li>
+<li><b>المفاضلة (Trade-off):</b> أمان أعلى = غالبًا أداء أقل وسهولة أقل. يجب اختيار نقطة متوازنة.</li>
+<li><b>الدفاع متعدد الطبقات (Layered defense / Defense in depth):</b> لا نعتمد على العزل وحده؛ نضيف معه التشفير وجدران الحماية والمراقبة وغيرها، فإن فشلت طبقة تحمي الأخرى.</li></ul>
+<div class="tip">💡 <b>ربط:</b> بيتك فيه باب مقفل + كاميرا + إنذار. لو جعلت 20 قفلًا على كل غرفة ستتعب أنت نفسك في الدخول والخروج.</div>`,
+quiz:[
+mcq('Too much isolation leads to:','الإفراط في العزل يؤدي إلى:',[['Increased complexity','زيادة التعقيد'],['Perfect usability','سهولة استخدام مثالية'],['Zero overhead','عدم وجود أي عبء'],['No security','انعدام الأمان']],0,'Too much isolation increases complexity.'),
+tf('There are trade-offs between security and performance when applying isolation.','هناك مفاضلات بين الأمان والأداء عند تطبيق العزل.',true,'صحيح.'),
+mcq('Isolation is best applied with:','يُطبَّق العزل على أفضل وجه مع:',[['Layered defense','دفاع متعدد الطبقات'],['A single control only','وسيلة حماية واحدة فقط'],['No other controls','دون أي ضوابط أخرى'],['Removing logins','إزالة تسجيل الدخول']],0,'Best applied with layered defense.'),
+sa('Why should isolation not be the only defense?','لماذا لا ينبغي أن يكون العزل خط الدفاع الوحيد؟','Because isolation is not foolproof and has trade-offs; layered defense adds other controls so that if one layer fails, others still protect the system.','لأن العزل غير مضمون بالكامل وله مفاضلات؛ والدفاع متعدد الطبقات يضيف ضوابط أخرى فإذا فشلت طبقة حمت غيرها النظام.','يربط بين صفحة 22 (ليس مضمونًا) وصفحة 23.')
+]},
+
+{n:24,te:'Best Practices',ta:'أفضل الممارسات',
+orig:['Best Practices','Use virtualization and containers carefully.','Apply least privilege principle.','Regularly audit isolation boundaries.'],
+trans:['أفضل الممارسات','استخدم الأجهزة الافتراضية (Virtualization) والحاويات بحذر.','طبّق مبدأ أقل صلاحية.','دقّق بانتظام في حدود العزل.'],
+explain:`<p>ثلاث ممارسات تُحفظ كتوصيات عملية:</p>
+<ul><li><b>① الحذر في استخدام الأجهزة الافتراضية والحاويات:</b> اختر الأنسب (VM أقوى، حاوية أخف) وأعدّها بإعدادات آمنة، وحدّثها.</li>
+<li><b>② تطبيق أقل صلاحية:</b> لا تمنح أكثر من اللازم لأي حساب أو خدمة.</li>
+<li><b>③ التدقيق الدوري (Audit):</b> افحص الحدود بانتظام للتأكد أنها ما زالت سليمة ولم تظهر ثغرة أو سوء إعداد.</li></ul>
+<div class="tip">💡 <b>ربط:</b> صيانة المبنى: اختر مواد البناء المناسبة، لا توزع المفاتيح على الجميع، وفتّش الجدران والأقفال دوريًا.</div>`,
+quiz:[
+mcq('Which is a recommended best practice?','أي مما يلي ممارسة موصى بها؟',[['Regularly audit isolation boundaries','التدقيق الدوري في حدود العزل'],['Give all users admin rights','إعطاء كل المستخدمين صلاحيات المدير'],['Never update systems','عدم تحديث الأنظمة أبدًا'],['Share one account for all','استخدام حساب واحد للجميع']],0,'Regularly audit isolation boundaries.'),
+tf('Virtualization and containers should be used carefully.','يجب استخدام الأجهزة الافتراضية والحاويات بحذر.',true,'صحيح.'),
+tf('Applying least privilege is not a best practice for isolation.','تطبيق أقل صلاحية ليس من أفضل ممارسات العزل.',false,'خطأ، فهو من الممارسات المذكورة: Apply least privilege principle.'),
+sa('List the three best practices for isolation.','اذكر أفضل الممارسات الثلاث للعزل.','Use virtualization and containers carefully; apply least privilege; regularly audit isolation boundaries.','استخدام الأجهزة الافتراضية والحاويات بحذر؛ تطبيق أقل صلاحية؛ التدقيق الدوري لحدود العزل.','')
+]},
+
+{n:25,te:'Lessons Learned',ta:'الدروس المستفادة',
+orig:['Lessons Learned','Isolation is critical for preventing unauthorized access.','Applies to processes, memory, and privileges.','Key role in OS and cloud environments.'],
+trans:['الدروس المستفادة','العزل أساسي لمنع الوصول غير المصرّح به.','ينطبق على العمليات والذاكرة والصلاحيات.','له دور رئيسي في أنظمة التشغيل والبيئات السحابية.'],
+explain:`<p>خلاصة الفصل في ثلاث جمل:</p>
+<ul><li><b>① الهدف:</b> منع الوصول غير المصرّح به.</li>
+<li><b>② النطاق:</b> العمليات + الذاكرة + الصلاحيات.</li>
+<li><b>③ أين؟</b> في أنظمة التشغيل (OS) والسحابة (Cloud).</li></ul>
+<div class="tip">💡 اختصر الفصل في سطر: <b>«نفصل الأشياء عن بعضها (العمليات، الذاكرة، الصلاحيات) في الـOS والسحابة لنمنع الوصول غير المصرّح به ونحتوي الضرر.»</b></div>`,
+quiz:[
+mcq('According to the lessons learned, isolation is critical for:','بحسب الدروس المستفادة، العزل أساسي لـ:',[['Preventing unauthorized access','منع الوصول غير المصرّح به'],['Increasing screen size','زيادة حجم الشاشة'],['Reducing electricity bills','تقليل فواتير الكهرباء'],['Designing logos','تصميم الشعارات']],0,'Isolation is critical for preventing unauthorized access.'),
+tf('Isolation applies only to processes.','ينطبق العزل على العمليات فقط.',false,'خطأ، ينطبق على العمليات والذاكرة والصلاحيات.'),
+sa('Where does isolation play a key role?','أين يلعب العزل دورًا رئيسيًا؟','In operating systems and cloud environments.','في أنظمة التشغيل والبيئات السحابية.','')
+]},
+
+{n:26,te:'Summary',ta:'الملخص',
+orig:['Summary','Process isolation prevents interference.','Memory isolation prevents leaks.','Privilege isolation enforces access limits.','Cloud requires strong tenant isolation.'],
+trans:['الملخص','عزل العمليات يمنع التداخل.','عزل الذاكرة يمنع التسرب.','عزل الصلاحيات يفرض حدود الوصول.','السحابة تتطلب عزلًا قويًا للمستأجرين.'],
+explain:`<p>هذا أهم جدول للحفظ السريع:</p>
+<ul><li><b>Process</b> ⟵ يمنع <b>Interference</b> (التداخل).</li>
+<li><b>Memory</b> ⟵ يمنع <b>Leaks</b> (التسرب).</li>
+<li><b>Privilege</b> ⟵ يفرض <b>Access limits</b> (حدود الوصول).</li>
+<li><b>Cloud</b> ⟵ يحتاج <b>Strong tenant isolation</b> (عزل قوي للمستأجرين).</li></ul>
+<div class="tip">💡 حيلة حفظ: <b>العمليات = لا تتدخل، الذاكرة = لا تسرّب، الصلاحيات = لا تتجاوز، السحابة = لا تختلط.</b></div>`,
+quiz:[
+mcq('Memory isolation primarily prevents:','عزل الذاكرة يمنع بشكل أساسي:',[['Leaks','التسرب'],['Interference only','التداخل فقط'],['Hardware aging','قِدم العتاد'],['Slow internet','بطء الإنترنت']],0,'Memory isolation prevents leaks.'),
+mcq('Privilege isolation:','عزل الصلاحيات:',[['Enforces access limits','يفرض حدود الوصول'],['Prevents interference only','يمنع التداخل فقط'],['Increases memory','يزيد الذاكرة'],['Removes users','يزيل المستخدمين']],0,'Privilege isolation enforces access limits.'),
+tf('Process isolation prevents interference.','عزل العمليات يمنع التداخل.',true,'صحيح.'),
+tf('The cloud does not need strong tenant isolation.','السحابة لا تحتاج عزلًا قويًا للمستأجرين.',false,'خطأ، Cloud requires strong tenant isolation.')
+]}
+];
+
+const FINAL=[
+mcq('Which is NOT a type of isolation covered in Chapter 3?','أي مما يلي ليس من أنواع العزل في الفصل 3؟',[['Process isolation','عزل العمليات'],['Memory isolation','عزل الذاكرة'],['Privilege isolation','عزل الصلاحيات'],['Bandwidth isolation','عزل عرض النطاق']],3,'الأنواع هي Process وMemory وPrivilege فقط (صفحة 6).'),
+mcq('Which component enforces process isolation?','أي مكوّن يفرض عزل العمليات؟',[['Operating system','نظام التشغيل'],['Web page','صفحة الويب'],['Monitor','الشاشة'],['Mouse','الفأرة']],0,'Enforced by operating systems (صفحة 7).'),
+mcq('Which is a mechanism of process isolation?','أي مما يلي آلية لعزل العمليات؟',[['Separate address spaces','مساحات عناوين منفصلة'],['Shared passwords','كلمات مرور مشتركة'],['One shared memory','ذاكرة واحدة مشتركة'],['Open ports','منافذ مفتوحة']],0,'صفحة 8.'),
+mcq('Modern browsers isolate each tab as:','المتصفحات الحديثة تعزل كل تبويب على أنه:',[['A process','عملية'],['A file','ملف'],['A cable','كابل'],['A user','مستخدم']],0,'صفحة 9.'),
+mcq('Memory isolation is achieved using:','يتحقق عزل الذاكرة باستخدام:',[['Virtual memory systems','أنظمة الذاكرة الافتراضية'],['Larger disks','أقراص أكبر'],['More users','مستخدمين أكثر'],['Faster CPUs only','معالجات أسرع فقط']],0,'صفحة 10.'),
+mcq('The MMU is:','وحدة MMU هي:',[['Hardware that supports memory isolation','عتاد يدعم عزل الذاكرة'],['A web browser','متصفح ويب'],['A virus','فيروس'],['A cloud provider','مزوّد سحابة']],0,'Memory Management Unit (صفحة 11).'),
+mcq('Which enforces separation between VMs?','أي مما يلي يفرض الفصل بين الأجهزة الافتراضية؟',[['Hypervisor','الهايبرفايزر'],['Firewall','جدار الحماية'],['Compiler','المترجم'],['Router','الموجّه']],0,'صفحة 12.'),
+mcq('Which mechanisms achieve privilege isolation?','أي الآليات تحقق عزل الصلاحيات؟',[['Privilege rings / user vs kernel mode','حلقات الصلاحيات / وضع المستخدم مقابل النواة'],['Page tables only','جداول الصفحات فقط'],['Sandbox colors','ألوان صندوق الحماية'],['Cache size','حجم الذاكرة المؤقتة']],0,'صفحة 13.'),
+mcq('The least privilege principle means:','مبدأ أقل صلاحية يعني:',[['Give only the minimum access needed','منح الحد الأدنى من الوصول اللازم فقط'],['Give all access to all','منح كل الوصول للجميع'],['Remove all access','إزالة كل وصول'],['Give access randomly','منح الوصول عشوائيًا']],0,'صفحة 14.'),
+mcq('In databases, privilege isolation helps prevent:','في قواعد البيانات يساعد عزل الصلاحيات على منع:',[['Privilege escalation','تصعيد الصلاحيات'],['Cooling problems','مشاكل التبريد'],['Image loss','فقد الصور'],['Network latency','تأخر الشبكة']],0,'صفحة 15.'),
+mcq('What mediates interactions between processes and the kernel?','ما الذي يتوسّط التفاعلات بين العمليات والنواة؟',[['System calls','استدعاءات النظام'],['Emails','رسائل البريد'],['Pop-ups','النوافذ المنبثقة'],['Cookies','ملفات تعريف الارتباط']],0,'صفحة 16.'),
+mcq('Which statement about containers is correct?','أي عبارة عن الحاويات صحيحة؟',[['Less overhead than VMs but weaker isolation','عبء أقل من VMs لكن عزل أضعف'],['Stronger isolation than VMs','عزل أقوى من VMs'],['They run their own hardware','تشغّل عتادها الخاص'],['They need no OS at all','لا تحتاج نظام تشغيل إطلاقًا']],0,'صفحة 18.'),
+mcq('Which provides stronger isolation and is used in cloud hosting?','أيها يوفر عزلًا أقوى ويُستخدم في الاستضافة السحابية؟',[['Hypervisor-based VMs','الأجهزة الافتراضية المعتمدة على الهايبرفايزر'],['Containers only','الحاويات فقط'],['Shared folders','المجلدات المشتركة'],['Screen sharing','مشاركة الشاشة']],0,'صفحة 19.'),
+mcq('Which is a challenge in cloud isolation?','أي مما يلي تحدٍّ في العزل السحابي؟',[['Side-channel attacks','هجمات القنوات الجانبية'],['Unlimited storage','تخزين غير محدود'],['Zero tenants','لا مستأجرين'],['Perfect isolation','عزل مثالي']],0,'صفحة 20.'),
+mcq('Isolation is best applied with:','يُطبَّق العزل على أفضل وجه مع:',[['Layered defense','دفاع متعدد الطبقات'],['No other controls','دون ضوابط أخرى'],['Maximum isolation always','أقصى عزل دائمًا'],['Disabling audits','تعطيل التدقيق']],0,'صفحة 23.'),
+mcq('Which of the following is a benefit of isolation?','أي مما يلي من فوائد العزل؟',[['Improves security by containing attacks','يحسّن الأمان باحتواء الهجمات'],['Removes all performance overhead','يزيل كل عبء الأداء'],['Makes bypassing isolation impossible','يجعل تجاوز العزل مستحيلًا'],['Removes the need for an operating system','يلغي الحاجة لنظام التشغيل']],0,'صفحة 21: فوائد العزل هي احتواء الهجمات، والموثوقية والاستقرار، ودعم الأنظمة متعددة المستخدمين.'),
+mcq('According to the lessons learned, isolation is critical for preventing:','بحسب الدروس المستفادة، العزل أساسي لمنع:',[['Unauthorized access','الوصول غير المصرّح به'],['Software updates','تحديثات البرامج'],['File compression','ضغط الملفات'],['Screen glare','وهج الشاشة']],0,'صفحة 25.'),
+mcq('Which pair is correctly matched according to the summary?','أي زوج مطابق بشكل صحيح بحسب الملخص؟',[['Process isolation - prevents interference','عزل العمليات - يمنع التداخل'],['Memory isolation - enforces access limits','عزل الذاكرة - يفرض حدود الوصول'],['Privilege isolation - prevents leaks','عزل الصلاحيات - يمنع التسرب'],['Cloud - needs no tenant isolation','السحابة - لا تحتاج عزل المستأجرين']],0,'صفحة 26: العمليات تمنع التداخل، والذاكرة تمنع التسرب، والصلاحيات تفرض حدود الوصول، والسحابة تتطلب عزلًا قويًا للمستأجرين.'),
+mcq('Sandboxes or containers are used in process isolation to:','تُستخدم صناديق الحماية أو الحاويات في عزل العمليات من أجل:',[['Run processes in restricted, separated environments','تشغيل العمليات في بيئات مقيّدة ومنفصلة'],['Merge all processes together','دمج كل العمليات معًا'],['Delete the operating system','حذف نظام التشغيل'],['Increase screen resolution','رفع دقة الشاشة']],0,'صفحة 8: Use of sandboxes or containers.'),
+
+tf('Isolation helps limit damage from compromised components.','العزل يساعد على الحدّ من الضرر الناتج عن المكوّنات المخترَقة.',true,'صفحة 5.'),
+tf('Process isolation allows one process to freely modify another process.','عزل العمليات يسمح لعملية بتعديل عملية أخرى بحرية.',false,'خطأ، فهو يمنع التداخل (صفحة 7).'),
+tf('IPC in process isolation is done through controlled interfaces.','الـIPC في عزل العمليات يتم عبر واجهات مضبوطة.',true,'صفحة 8.'),
+tf('A crash in one browser tab will crash all other tabs in modern browsers.','انهيار تبويب واحد سيُسقط بقية التبويبات في المتصفحات الحديثة.',false,'خطأ، صفحة 9.'),
+tf('Memory isolation uses virtual memory and page tables.','عزل الذاكرة يستخدم الذاكرة الافتراضية وجداول الصفحات.',true,'صفحتا 10 و11.'),
+tf('Each VM has its own isolated memory.','لكل جهاز افتراضي ذاكرته المعزولة.',true,'صفحة 12.'),
+tf('Privilege isolation allows regular users to perform admin tasks.','عزل الصلاحيات يسمح للمستخدمين العاديين بتنفيذ مهام المدير.',false,'خطأ، صفحة 13.'),
+tf('Containers provide stronger isolation than hypervisor-based VMs.','الحاويات توفر عزلًا أقوى من الأجهزة الافتراضية المعتمدة على الهايبرفايزر.',false,'خطأ، العكس صحيح (صفحتا 18 و19).'),
+tf('Multi-tenant cloud systems require strong tenant isolation.','الأنظمة السحابية متعددة المستأجرين تتطلب عزلًا قويًا للمستأجرين.',true,'صفحتا 17 و26.'),
+tf('Isolation is foolproof and cannot be bypassed.','العزل مضمون بالكامل ولا يمكن تجاوزه.',false,'خطأ، صفحة 22: Not foolproof.'),
+tf('Covert channels and shared resource leaks can bypass isolation.','القنوات الخفية وتسريبات الموارد المشتركة يمكنها تجاوز العزل.',true,'صفحة 22.'),
+tf('Regularly auditing isolation boundaries is a best practice.','التدقيق الدوري في حدود العزل من أفضل الممارسات.',true,'صفحة 24.'),
+tf('In a database system, users only access permitted queries.','في نظام قاعدة البيانات، يصل المستخدمون فقط إلى الاستعلامات المسموح بها.',true,'صفحة 15.'),
+tf('System calls let programs access protected resources without any mediation.','استدعاءات النظام تتيح للبرامج الوصول إلى الموارد المحمية دون أي توسّط.',false,'خطأ، صفحة 16: System calls mediate interactions أي تتوسط التفاعلات.'),
+tf('Too much isolation increases complexity.','الإفراط في العزل يزيد التعقيد.',true,'صفحة 23.'),
+tf('Isolation enhances reliability and stability and supports multi-user systems.','العزل يعزز الموثوقية والاستقرار ويدعم الأنظمة متعددة المستخدمين.',true,'صفحة 21.'),
+tf('Regular user programs run in kernel mode with full privileges.','برامج المستخدم العادية تعمل في وضع النواة بصلاحيات كاملة.',false,'خطأ، البرامج العادية تعمل في وضع المستخدم المحدود، ووضع النواة للنظام (صفحتا 13 و14).'),
+tf('Side-channel attacks are listed among the challenges in cloud isolation.','هجمات القنوات الجانبية مذكورة ضمن تحديات العزل السحابي.',true,'صفحة 20.'),
+
+ess('Define isolation and explain why it is important in secure system design.','عرّف العزل واشرح لماذا هو مهم في تصميم الأنظمة الآمنة.','Isolation is a principle that keeps processes and users separate to prevent unauthorized access and interference. It is important because it prevents data leakage between processes, limits damage from compromised components, supports multi-user and multi-tenant environments, and improves reliability and security.','العزل مبدأ يُبقي العمليات والمستخدمين منفصلين لمنع الوصول غير المصرّح به والتداخل. وأهميته أنه يمنع تسرب البيانات بين العمليات، ويحدّ من ضرر المكوّنات المخترقة، ويدعم البيئات متعددة المستخدمين والمستأجرين، ويرفع الموثوقية والأمان.','الأسئلة التعريفية: عرّف أولًا ثم اذكر الأسباب الثلاثة (صفحتا 4 و5).'),
+ess('Differentiate between process isolation, memory isolation, and privilege isolation with an example for each.','فرّق بين عزل العمليات وعزل الذاكرة وعزل الصلاحيات مع مثال لكل نوع.','Process isolation: each process runs independently and is enforced by the OS, e.g., browser tabs as separate processes. Memory isolation: one process cannot access another process memory using virtual memory, page tables and MMU, e.g., each VM has isolated memory. Privilege isolation: separating user rights levels using privilege rings or user vs kernel mode, e.g., database admins vs users.','عزل العمليات: كل عملية تعمل باستقلال ويفرضه نظام التشغيل، مثل التبويبات كعمليات منفصلة. عزل الذاكرة: لا تصل عملية لذاكرة غيرها عبر الذاكرة الافتراضية وجداول الصفحات وMMU، مثل الذاكرة المعزولة لكل جهاز افتراضي. عزل الصلاحيات: فصل مستويات حقوق المستخدمين بحلقات الصلاحيات أو وضع المستخدم/النواة، مثل مدراء قواعد البيانات مقابل المستخدمين.','سؤال تفريق ممتاز للمقالي، ذكر المثال يرفع الدرجة.'),
+ess('Compare container isolation and hypervisor-based isolation in cloud environments.','قارن بين عزل الحاويات والعزل المعتمد على الهايبرفايزر في البيئات السحابية.','Containers isolate applications within the same OS, have less overhead but weaker isolation, and are useful for microservices. Hypervisor-based isolation isolates each VM at hardware level, provides stronger security, and is used in cloud hosting environments, but with more overhead.','الحاويات تعزل التطبيقات داخل نفس نظام التشغيل، عبؤها أقل لكن عزلها أضعف، ومفيدة للخدمات المصغّرة. أما العزل المعتمد على الهايبرفايزر فيعزل كل VM على مستوى العتاد ويوفر أمانًا أقوى ويُستخدم في الاستضافة السحابية لكن بعبء أكبر.','يمكنك رسم جدول بسيط في ورقة الاختبار.'),
+ess('Discuss the challenges and limitations of isolation.','ناقش تحديات العزل وقيوده.','Cloud challenges: side-channel attacks, shared hardware risks, and complexity of multi-tenant management. Limitations: performance overhead, complexity in implementation, and not foolproof because attackers can bypass it with side-channel attacks, covert channels, or shared resource leaks.','تحديات السحابة: هجمات القنوات الجانبية، مخاطر العتاد المشترك، وتعقيد إدارة المستأجرين. القيود: عبء الأداء، تعقيد التنفيذ، وعدم الضمان الكامل لأن المهاجم قد يتجاوزه عبر القنوات الجانبية والخفية وتسريبات الموارد المشتركة.','صفحتا 20 و22.'),
+ess('How can an organization balance isolation with usability? List best practices.','كيف يمكن لمؤسسة الموازنة بين العزل وسهولة الاستخدام؟ اذكر أفضل الممارسات.','Too much isolation increases complexity and there are trade-offs between security and performance, so isolation should be applied with layered defense. Best practices: use virtualization and containers carefully, apply least privilege, and regularly audit isolation boundaries.','الإفراط في العزل يزيد التعقيد وهناك مفاضلة بين الأمان والأداء، لذا يُطبَّق ضمن دفاع متعدد الطبقات. أفضل الممارسات: استخدام الأجهزة الافتراضية والحاويات بحذر، وتطبيق أقل صلاحية، والتدقيق الدوري في حدود العزل.','صفحتا 23 و24.'),
+ess('Explain how isolation is applied in operating systems and in cloud environments.','اشرح كيف يُطبَّق العزل في أنظمة التشغيل وفي البيئات السحابية.','Operating systems: processes are isolated through address spaces, system calls mediate interactions, and this prevents privilege escalation attacks. Cloud: tenants are separated in multi-cloud systems, VMs and containers ensure workload isolation, and this is critical for security in shared infrastructure.','أنظمة التشغيل: تُعزل العمليات عبر مساحات العناوين، وتتوسط استدعاءات النظام التفاعلات، فيُمنع تصعيد الصلاحيات. السحابة: يُفصل المستأجرون في الأنظمة متعددة السحابات، وتضمن الأجهزة الافتراضية والحاويات عزل أحمال العمل، وهذا أساسي للأمان في البنية المشتركة.','صفحتا 16 و17.')
+];
+
+// Full Arabic explanations (why the answer is correct, based on the page)
+const XFIX={
+'3.3':'الصفحة تعرض 4 أهداف: (1) فهم مفهوم العزل، (2) التفريق بين الأنواع الثلاثة، (3) دراسة العزل في أنظمة التشغيل والبيئات السحابية، (4) مناقشة الفوائد والقيود. لذلك الجواب: أربعة أهداف، والمتعلق بالبيئتين هو الهدف الثالث.',
+'6.3':'صحيح لأن الصفحة تسرد ثلاثة أنواع هي: Process وMemory وPrivilege، وعزل الذاكرة هو الثاني منها.',
+'6.4':'الصفحة تسرد الأنواع الثلاثة، ومعانيها كما في الصفحات اللاحقة: العمليات = كل برنامج يعمل منفصلًا (صفحة 7)، الذاكرة = لا تصل عملية لذاكرة غيرها (صفحة 10)، الصلاحيات = فصل مستويات حقوق المستخدمين (صفحة 13). الإجابة الجيدة تذكر الأنواع الثلاثة مع معنى مختصر لكل نوع.',
+'7.1':'الإجابة نظام التشغيل لأن الشريحة تنص على أن عزل العمليات مفروض بواسطة أنظمة التشغيل؛ فهو الحَكَم الذي يطبّق الفصل بين العمليات، لا التطبيق نفسه ولا المستخدم.',
+'8.1':'مساحات العناوين المنفصلة هي أول آلية ذكرتها الصفحة؛ لكل عملية مساحة عناوين خاصة فلا ترى عناوين غيرها. أما الذاكرة المشتركة لجميع العمليات فتكسر العزل ولا تحققه، وكذلك حذف حسابات المستخدمين أو تعطيل نظام التشغيل.',
+'8.3':'الصفحة تذكر استخدام صناديق الحماية أو الحاويات كآلية عزل، أي تشغيل العملية داخل بيئة مقيّدة ومنفصلة بصلاحيات ومساحة محدودة، ولا علاقة لها بسرعة الشبكة أو الطباعة.',
+'8.4':'IPC هو التواصل بين العمليات. تشترط الصفحة أن يتم عبر واجهات مضبوطة (controlled interfaces) لأن التواصل الحر سيسمح لعملية بالتدخل في أخرى أو قراءة بياناتها فينهار معنى العزل؛ فالقنوات الرسمية المراقبة تحافظ على الفصل مع السماح بالتعاون.',
+'9.3':'كل تبويب يعمل كعملية مستقلة، فإذا انهار تبويب بقي الانهيار محصورًا فيه ولم يتأثر غيره، وهذا هو معنى الاستقلال ومنع التداخل في عزل العمليات (صفحة 9).',
+'10.2':'الصفحة تنص على أن عزل الذاكرة يتحقق عبر أنظمة الذاكرة الافتراضية، حيث تحصل كل عملية على عناوين خاصة بها يترجمها النظام إلى مواقع مختلفة، فلا تصل لذاكرة غيرها.',
+'10.4':'الهدف في الصفحة: ضمان ألا تصل عملية إلى ذاكرة عملية أخرى. والتقنية: أنظمة الذاكرة الافتراضية. وتضيف الصفحة أنه يحمي من هجمات Buffer Overflow.',
+'11.1':'الاختصار MMU يعني Memory Management Unit أي وحدة إدارة الذاكرة، وهي عتاد (Hardware) يدعم العزل بترجمة العناوين وفحص الحدود، كما تقول الصفحة.',
+'11.3':'الصفحة تذكر في أول نقطة جداول الصفحات (Page Tables) وتقسيم الذاكرة (Segmentation) كتقنيتين عمليتين لعزل الذاكرة. باقي الخيارات لا علاقة لها بالذاكرة.',
+'11.4':'آخر نقطة في الصفحة: عزل الذاكرة يمنع تسرب البيانات (Data leaks) وتلف الذاكرة (Memory corruption).',
+'12.1':'الهايبرفايزر (Hypervisor) هو المكوّن الذي يفرض الفصل بين الأجهزة الافتراضية بحسب الصفحة، كما يفرض نظام التشغيل الفصل بين العمليات.',
+'12.2':'خطأ لأن الصفحة تقول إن لكل جهاز افتراضي ذاكرة معزولة خاصة به؛ ولو كانت الذاكرة مشتركة لانتفى العزل.',
+'12.3':'الأجهزة الافتراضية مثال على عزل الذاكرة: لكل VM ذاكرته المعزولة، والهايبرفايزر يفرض الفصل فلا يصل جهاز افتراضي لذاكرة آخر (صفحة 12).',
+'13.1':'تعريف الصفحة: عزل الصلاحيات هو فصل مستويات حقوق المستخدمين المختلفة (مدير، مستخدم عادي...)، أي أنه يتعلق بما يُسمح لكل طرف بفعله.',
+'14.3':'الصفحة تقارن في نقطتها الأخيرة بين المدراء (Admins) والمستخدمين العاديين (standard users)؛ فحساب المدير تختلف صلاحياته عن الحساب العادي.',
+'14.4':'نقاط الصفحة الثلاث: (1) وضع المستخدم مقابل وضع النواة، (2) تطبيق مبدأ أقل صلاحية على الحسابات، (3) المدراء مقابل المستخدمين العاديين.',
+'15.1':'الصفحة تقول إن مدراء قواعد البيانات (DB admins) هم من يديرون البنية، أما المستخدمون العاديون فيقتصرون على الاستعلامات المسموحة.',
+'15.2':'خطأ لأن الصفحة تقول إن المستخدمين يصلون فقط إلى الاستعلامات المسموح بها، وهذا القيد هو ما يمنعهم من تجاوز صلاحياتهم.',
+'15.3':'هذا الفصل بين دور المدير ودور المستخدم يمنع تصعيد الصلاحيات (Privilege escalation)، وهي النقطة الأخيرة في الصفحة.',
+'15.4':'تصعيد الصلاحيات أن يحصل مستخدم على حقوق أعلى مما يُسمح له. وتساعد الأدوار في منعه لأن المدير وحده يدير البنية، والمستخدم يقتصر على استعلامات مسموحة، فلا يملك طريقًا لتغيير النظام (صفحة 15).',
+'16.1':'الصفحة تنص على أن استدعاءات النظام (System Calls) تتوسط التفاعلات: البرنامج يطلب من النواة ما يريد عبرها، والنواة تتحقق قبل التنفيذ.',
+'16.2':'صحيح، فأول نقطة في الصفحة أن العمليات تُعزل عبر مساحات العناوين، وهو ما شرحته الصفحتان 8 و10.',
+'18.1':'الصفحة تقول إن الحاويات أقل عبئًا من الأجهزة الافتراضية لكن عزلها أضعف، فهي أخف لكنها أقل أمانًا بسبب مشاركة نظام التشغيل.',
+'18.3':'آخر نقطة في الصفحة: الحاويات مفيدة للخدمات المصغّرة (Microservices) لخفتها وسرعتها.',
+'19.1':'الصفحة تقول إن كل VM معزول على مستوى العتاد (Hardware level)، وهذا سبب كونه أقوى أمنًا من الحاويات.',
+'19.3':'الصفحة تنص على استخدامه في بيئات الاستضافة السحابية (Cloud hosting)، حيث يتشارك عملاء كثيرون خادمًا واحدًا ويلزم عزل قوي بينهم.',
+'19.4':'الحاويات: تعزل التطبيقات داخل نفس نظام التشغيل، أخف وأضعف عزلًا (صفحة 18). العزل بالهايبرفايزر: كل VM معزول على مستوى العتاد، أقوى أمنًا، ويُستخدم في الاستضافة السحابية (صفحة 19). المقارنة الجيدة تذكر العبء والقوة والاستخدام.',
+'20.1':'هجمات القنوات الجانبية هي أول تحدٍّ في الصفحة. أما قلة المستأجرين أو الذاكرة غير المحدودة أو انعدام العتاد فليست تحديات مذكورة.',
+'20.2':'صحيح، الصفحة تذكر مخاطر العتاد المشترك لأن عدة مستأجرين يتشاركون المعالج والذاكرة الفيزيائية فقد تتسرب معلومات عبرها.',
+'20.3':'التحدي الثالث في الصفحة هو تعقيد إدارة البيئات متعددة المستأجرين (Complexity of multi-tenant management)، والكلمة في النص الأصلي مكتوبة بخطأ مطبعي Somplexity.',
+'20.4':'التحديات الثلاثة في الصفحة: (1) هجمات القنوات الجانبية، (2) مخاطر العتاد المشترك، (3) تعقيد إدارة المستأجرين المتعددين. للحفظ: هجوم، عتاد، إدارة.',
+'21.1':'أول فائدة في الصفحة: تحسين الأمان عبر احتواء الهجمات، أي يبقى الاختراق محصورًا في الجزء المصاب.',
+'21.2':'صحيح، الفائدة الثانية في الصفحة: تعزيز الموثوقية والاستقرار، لأن عطل جزء لا ينتشر لبقية النظام.',
+'21.3':'خطأ، فالفائدة الثالثة أن العزل يدعم الأنظمة متعددة المستخدمين، إذ يستخدم عدة أشخاص نفس الجهاز بأمان دون تداخل.',
+'21.4':'فوائد الصفحة الثلاث: (1) تحسين الأمان باحتواء الهجمات، (2) تعزيز الموثوقية والاستقرار، (3) دعم الأنظمة متعددة المستخدمين.',
+'22.1':'عبء الأداء (Performance overhead) هو أول قيد في الصفحة، لأن الفصل والفحص يستهلكان وقتًا وموارد. أما الخيارات الأخرى فليست من القيود المذكورة.',
+'23.1':'الصفحة تقول إن الإفراط في العزل يزيد التعقيد، لأن كثرة الحدود تصعّب التواصل والإدارة وتزيد الأخطاء.',
+'23.2':'صحيح، النقطة الثانية في الصفحة: هناك مفاضلات بين الأمان والأداء؛ فزيادة العزل ترفع الأمان وقد تخفض الأداء.',
+'23.3':'الصفحة تقول إن العزل يُطبَّق على أفضل وجه ضمن دفاع متعدد الطبقات (Layered defense)، فلا يُعتمد عليه وحده.',
+'23.4':'لأن العزل ليس مضمونًا بالكامل (صفحة 22) وله مفاضلات (صفحة 23)، فالدفاع متعدد الطبقات يضيف ضوابط أخرى، فإذا تجاوز المهاجم طبقة العزل وجد طبقات أخرى تحمي النظام.',
+'24.1':'التدقيق الدوري في حدود العزل هو ثالث ممارسة في الصفحة؛ أما إعطاء الجميع صلاحيات المدير أو عدم التحديث أو حساب مشترك فكلها تضعف الأمان.',
+'24.2':'صحيح، أول ممارسة في الصفحة: استخدام الأجهزة الافتراضية والحاويات بحذر، لأن سوء إعدادها يخلق ثغرات.',
+'24.4':'ممارسات الصفحة الثلاث: (1) استخدام الأجهزة الافتراضية والحاويات بحذر، (2) تطبيق مبدأ أقل صلاحية، (3) التدقيق الدوري لحدود العزل.',
+'25.2':'خطأ، فالصفحة تقول إن العزل ينطبق على العمليات والذاكرة والصلاحيات معًا، وليس العمليات فقط.',
+'25.3':'النقطة الثالثة في الصفحة: للعزل دور رئيسي في أنظمة التشغيل (OS) والبيئات السحابية (Cloud).',
+'26.1':'الملخص يقول: عزل الذاكرة يمنع التسرب (Leaks)، بينما عزل العمليات يمنع التداخل.',
+'26.2':'الملخص يقول: عزل الصلاحيات يفرض حدود الوصول (Access limits)، أي يحدد ما يُسمح لكل مستخدم بفعله.',
+'26.3':'صحيح، أول نقطة في الملخص: عزل العمليات يمنع التداخل (Interference) بين العمليات.',
+'26.4':'خطأ، آخر نقطة في الملخص: السحابة تتطلب عزلًا قويًا للمستأجرين، لأن البنية مشتركة بين عملاء كثيرين.',
+'F.2':'صفحة 7: نظام التشغيل هو من يفرض عزل العمليات، فهو الحَكَم الذي يطبّق الفصل.',
+'F.3':'صفحة 8: مساحات العناوين المنفصلة آلية عزل مذكورة؛ أما كلمات المرور المشتركة والذاكرة المشتركة والمنافذ المفتوحة فتضعف العزل.',
+'F.4':'صفحة 9: المتصفحات الحديثة تعزل كل تبويب كعملية مستقلة، فلا يؤثر انهيار تبويب على غيره.',
+'F.5':'صفحة 10: عزل الذاكرة يتحقق باستخدام أنظمة الذاكرة الافتراضية، وليس بأقراص أكبر أو معالجات أسرع.',
+'F.6':'صفحة 11: MMU اختصار Memory Management Unit، وهي عتاد يدعم عزل الذاكرة.',
+'F.7':'صفحة 12: الهايبرفايزر يفرض الفصل بين الأجهزة الافتراضية؛ أما جدار الحماية والموجّه والمترجم فلا يؤدون هذه المهمة.',
+'F.8':'صفحة 13: حلقات الصلاحيات أو وضع المستخدم مقابل وضع النواة هما وسيلتا تحقيق عزل الصلاحيات؛ أما جداول الصفحات فلعزل الذاكرة.',
+'F.9':'صفحة 14: أقل صلاحية تعني منح كل حساب الحد الأدنى اللازم لعمله فقط، لا أكثر.',
+'F.10':'صفحة 15: الفصل بين مدير القاعدة والمستخدم يمنع تصعيد الصلاحيات.',
+'F.11':'صفحة 16: استدعاءات النظام هي الوسيط بين البرامج والنواة، تتحقق من الطلب قبل تنفيذه.',
+'F.12':'صفحة 18: الحاويات أقل عبئًا من الأجهزة الافتراضية لكن عزلها أضعف لأنها تتشارك نظام التشغيل؛ لذلك بقية العبارات خاطئة.',
+'F.13':'صفحة 19: الأجهزة الافتراضية المعتمدة على الهايبرفايزر معزولة على مستوى العتاد، وتعطي أمانًا أقوى، وتُستخدم في الاستضافة السحابية.',
+'F.14':'صفحة 20: هجمات القنوات الجانبية من تحديات العزل السحابي مع مخاطر العتاد المشترك وتعقيد إدارة المستأجرين.',
+'F.15':'صفحة 23: يُطبَّق العزل على أفضل وجه ضمن دفاع متعدد الطبقات، لأن الإفراط فيه يزيد التعقيد وهو وحده ليس مضمونًا.',
+'F.17':'صفحة 25: العزل أساسي لمنع الوصول غير المصرّح به، وهذا هو الهدف الأول من المبدأ.',
+'F.19':'صفحة 8: صناديق الحماية والحاويات وسيلة لتشغيل العملية في بيئة مقيّدة ومنفصلة عن غيرها.',
+'F.20':'صحيح، صفحة 5: من أهمية العزل أنه يحدّ من الضرر الناتج عن المكوّنات المخترَقة بحصر الاختراق في جزء واحد.',
+'F.21':'خطأ، صفحة 7: عزل العمليات يمنع عملية من التدخل في أخرى، فلا تستطيع تعديلها بحرية.',
+'F.22':'صحيح، صفحة 8: التواصل بين العمليات (IPC) مسموح لكن عبر واجهات مضبوطة فقط.',
+'F.23':'خطأ، صفحة 9: العزل يمنع انهيار تبويب واحد من التأثير على بقية التبويبات.',
+'F.24':'صحيح، صفحتا 10 و11: عزل الذاكرة يتحقق بالذاكرة الافتراضية وبتقنيات مثل جداول الصفحات وتقسيم الذاكرة.',
+'F.25':'صحيح، صفحة 12: كل جهاز افتراضي له ذاكرة معزولة خاصة به.',
+'F.26':'خطأ، صفحة 13: عزل الصلاحيات يمنع المستخدمين العاديين من تنفيذ مهام إدارية.',
+'F.27':'خطأ، العكس صحيح: الحاويات عزلها أضعف (صفحة 18)، والأجهزة الافتراضية المعتمدة على الهايبرفايزر توفر أمانًا أقوى (صفحة 19).',
+'F.28':'صحيح، صفحة 17 تصف العزل بأنه حرج للأمان في البنية المشتركة، وصفحة 26 تقول إن السحابة تتطلب عزلًا قويًا للمستأجرين.',
+'F.29':'خطأ، صفحة 22: العزل ليس مضمونًا بالكامل ويمكن تجاوزه بطرق منها القنوات الجانبية.',
+'F.30':'صحيح، صفحة 22 تذكر القنوات الخفية وتسريبات الموارد المشتركة ضمن طرق تجاوز العزل.',
+'F.31':'صحيح، صفحة 24: التدقيق الدوري لحدود العزل من أفضل الممارسات لاكتشاف أي خلل في الإعداد.',
+'F.32':'صحيح، صفحة 15: المستخدمون يصلون فقط للاستعلامات المسموح بها، وهذا يمنع تصعيد الصلاحيات.',
+'F.34':'صحيح، صفحة 23: الإفراط في العزل يزيد التعقيد.',
+'F.35':'صحيح، صفحة 21: من فوائد العزل تعزيز الموثوقية والاستقرار ودعم الأنظمة متعددة المستخدمين.',
+'F.37':'صحيح، صفحة 20: هجمات القنوات الجانبية أول تحدٍّ مذكور في العزل السحابي.',
+'F.40':'مقارنة الحاويات (صفحة 18) بالعزل بالهايبرفايزر (صفحة 19): الحاويات تتشارك نظام التشغيل، أخف وأضعف عزلًا وتناسب الخدمات المصغّرة؛ والهايبرفايزر يعزل كل VM على مستوى العتاد، أقوى أمنًا ويُستخدم في الاستضافة السحابية.',
+'F.41':'تحديات السحابة من صفحة 20 وقيود العزل من صفحة 22. للحفظ: التحديات (هجوم، عتاد، إدارة)، والقيود (أداء، تعقيد، غير مضمون).',
+'F.42':'الإفراط في العزل يزيد التعقيد وبين الأمان والأداء مفاضلة (صفحة 23)، والحل دفاع متعدد الطبقات مع أفضل الممارسات الثلاث (صفحة 24).',
+'F.43':'أنظمة التشغيل (صفحة 16): مساحات عناوين، واستدعاءات نظام تتوسط، ومنع تصعيد الصلاحيات. السحابة (صفحة 17): فصل المستأجرين، وأجهزة افتراضية وحاويات لعزل الأحمال، وهو حرج للبنية المشتركة.'
+};
+PAGES.forEach(p=>p.quiz.forEach((q,i)=>{const k=p.n+'.'+(i+1);if(XFIX[k])q.x=XFIX[k];}));
+FINAL.forEach((q,i)=>{const k='F.'+(i+1);if(XFIX[k])q.x=XFIX[k];});
+
+// Spread correct MCQ answers across A-D (deterministic rotation, keeps option text intact)
+let _c=0;
+function spread(list){list.forEach(q=>{if(q.t==='mcq'){const r=(_c++)%4;if(r){const n=q.o.length;q.o=q.o.slice(n-r).concat(q.o.slice(0,n-r));q.a=(q.a+r)%n;}}});}
+PAGES.forEach(p=>spread(p.quiz));spread(FINAL);
+//DATA_END
+
+(function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const L=['A','B','C','D','E'];
+function renderQ(q,i,prefix){
+  const typeLabel={mcq:'اختيار من متعدد · MCQ',tf:'صح / خطأ · True/False',sa:'إجابة قصيرة · Short Answer',essay:'مقالي · Essay'}[q.t];
+  let h=`<div class="q"><div class="qh"><span class="qn">${prefix}${i+1}</span><span class="qt">${typeLabel}</span></div>`;
+  h+=`<div class="qen en">${esc(q.q[0])}</div><div class="qar ar">${esc(q.q[1])}</div>`;
+  if(q.t==='mcq'){
+    q.o.forEach((o,k)=>{h+=`<div class="opt"><div class="en">${L[k]}) ${esc(o[0])}</div><div class="ar">${L[k]}) ${esc(o[1])}</div></div>`;});
+  }
+  if(q.t==='tf'){
+    h+=`<div class="opt"><div class="en">True</div><div class="ar">صح</div></div><div class="opt"><div class="en">False</div><div class="ar">خطأ</div></div>`;
+  }
+  h+=`<details class="ans"><summary>إظهار الإجابة</summary><div class="ansbox">`;
+  if(q.t==='mcq'){
+    const c=q.o[q.a];
+    h+=`<div class="ok">✔ الإجابة الصحيحة: ${L[q.a]}</div><div class="en">${L[q.a]}) ${esc(c[0])}</div><div class="ar">${L[q.a]}) ${esc(c[1])}</div>`;
+  }else if(q.t==='tf'){
+    h+=`<div class="ok">✔ الإجابة الصحيحة:</div><div class="en">${q.a?'True':'False'}</div><div class="ar">${q.a?'صح':'خطأ'}</div>`;
+  }else{
+    h+=`<div class="ok">✔ الإجابة النموذجية:</div><div class="en">${esc(q.ae)}</div><div class="ar">${esc(q.aa)}</div>`;
+  }
+  if(q.x) h+=`<div class="why ar"><b>الشرح ولماذا؟</b> ${esc(q.x)}</div>`;
+  h+=`</div></details></div>`;
+  return h;
+}
+function lines(arr,plain){
+  return arr.map((t,i)=>`<div class="line">${(!plain&&i>0)?'• ':''}${i===0?'<b>'+esc(t)+'</b>':esc(t)}</div>`).join('');
+}
+let nav='<span class="lbl">الصفحات:</span>';
+let html='';
+PAGES.forEach(p=>{
+  nav+=`<a href="#p${p.n}">${p.n}</a>`;
+  html+=`<section class="page" id="p${p.n}">
+  <div class="ph"><div class="t"><div class="num">الصفحة ${p.n} من ${PAGES.length}</div><h2><span class="en" style="display:block">${esc(p.te)}</span><span class="ar" style="display:block">${esc(p.ta)}</span></h2></div>
+  <div class="links">${p.n>1?`<a href="#p${p.n-1}">▶ السابقة</a>`:''}<a href="#top">⬆ الفهرس</a>${p.n<PAGES.length?`<a href="#p${p.n+1}">التالية ◀</a>`:`<a href="#final">المراجعة النهائية ◀</a>`}</div></div>
+  <div class="part"><h3>① النص الأصلي (English)</h3><div class="orig en">${lines(p.orig,p.plain)}</div></div>
+  <div class="part"><h3>② الترجمة العربية</h3><div class="trans ar">${lines(p.trans,p.plain)}</div></div>
+  <div class="part explain"><h3>③ الشرح والتبسيط</h3>${p.explain}</div>
+  <div class="part"><h3>④ اختبر نفسك (${p.quiz.length} أسئلة)</h3>${p.quiz.map((q,i)=>renderQ(q,i,'س')).join('')}</div>
+  </section>`;
+});
+nav+=`<a class="fin" href="#final">مراجعة نهائية</a>`;
+const mc=FINAL.filter(q=>q.t==='mcq'),tfq=FINAL.filter(q=>q.t==='tf'),es=FINAL.filter(q=>q.t==='essay');
+html+=`<section class="page final" id="final"><div class="ph"><div class="t"><div class="num">خاتمة الملف</div><h2><span class="en" style="display:block">Comprehensive Final Review</span><span class="ar" style="display:block">المراجعة النهائية الشاملة</span></h2></div><div class="links"><a href="#p26">▶ السابقة</a><a href="#top">⬆ الفهرس</a></div></div>
+<div class="part"><div class="box note" style="margin:0"><h3>تعليمات</h3>أسئلة تغطي كامل الفصل بنفس أنماط اختبار الدكتور: اختيار من متعدد، صح/خطأ، ومقالي. حاول الإجابة بدون النظر ثم اضغط «إظهار الإجابة».</div></div>
+<div class="part"><h3>القسم الأول: اختيار من متعدد (MCQs) — ${mc.length} سؤال</h3>${mc.map((q,i)=>renderQ(q,i,'م')).join('')}</div>
+<div class="part"><h3>القسم الثاني: صح / خطأ (True/False) — ${tfq.length} سؤال</h3>${tfq.map((q,i)=>renderQ(q,i,'ص')).join('')}</div>
+<div class="part"><h3>القسم الثالث: أسئلة مقالية (Essay) — ${es.length} أسئلة</h3>${es.map((q,i)=>renderQ(q,i,'ق')).join('')}</div>
+</section>`;
+$('#navrow').innerHTML=nav;
+$('#content').innerHTML=html;
+(function(){const fixEn=root=>{document.querySelectorAll('.en').forEach(el=>{const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const ns=[];while(w.nextNode())ns.push(w.currentNode);ns.forEach(n=>{if(n.nodeValue.trim())n.nodeValue='\u200E'+n.nodeValue.trim()+'\u200E';});});};fixEn();})();
+document.querySelectorAll('details.ans').forEach(d=>{const s=d.querySelector('summary');d.addEventListener('toggle',()=>{s.textContent=d.open?'إخفاء الإجابة':'إظهار الإجابة';});});
+if(location.hash.length>1){const t=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(t)t.scrollIntoView({behavior:'instant'});}
+$('#closeAll').addEventListener('click',()=>{document.querySelectorAll('details.ans[open]').forEach(d=>d.removeAttribute('open'));});
+})();
+</script>
+</body>
+</html>
